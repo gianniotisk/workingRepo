@@ -1,0 +1,127 @@
+.trending-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: hidden;
+}
+
+.trending-card-display {
+    background-color: #d9d9d9; /* Gray background */
+    height: 200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+.tc-display-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Post type label (Featured, News, etc.) */
+.tc-display-term {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #ffffffcc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Bookmark icon (top-right) */
+.tc-display-bookmark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: auto;
+}
+
+/* Tags container */
+.tc--display-tags {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Individual Tag Box */
+.tag-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    height: 25px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Tag text */
+.tag-box span {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Icon inside tag box */
+.tag-box:first-child {
+    width: 25px;
+    padding: 0;
+}
+
+.tag-icon {
+    width: 16px;
+    height: auto;
+}
+
+/* Post Content */
+.trending-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.trending-card-content h4 {
+    font-size: 15px;
+    color: #333;
+    text-align: justify;
+}
+
+/* Post Metadata */
+.tc-content-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #888;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+/* Comment Icon */
+.comment-icon {
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+    vertical-align: middle;
+}

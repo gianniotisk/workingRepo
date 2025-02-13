@@ -1,0 +1,51 @@
+/*--------------------------- Whole Top Right -------------------*/
+.footer-follow {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------- Title: Follow Us --------*/
+.footer-followus {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+/*--------------- Social Media ------------*/
+.footer-socialmedia ul {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-socialmedia ul li img {
+    width: 25px; 
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.footer-socialmedia ul li img:hover {
+    transform: scale(1.1);
+}
+
+/*--------------------------- RESPONSIVE -------------------*/
+@media (max-width: 768px) {
+    .footer-followus {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-socialmedia ul {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+/*----------------------------------------------------------*/

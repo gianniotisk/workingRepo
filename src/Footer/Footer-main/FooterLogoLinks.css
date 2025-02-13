@@ -1,0 +1,56 @@
+/*--------------------------- Whole Top Left -------------------*/
+.footer-topleft {
+    display: flex;
+    flex-direction: column;
+}
+
+/*--------------- Logo: Icon & Name --------*/
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.logo-icon {
+    height: 35px;
+}
+.logo-name {
+    height: 20px;
+}
+
+/*--------------- About Links --------------*/
+.footer-about ul {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-about ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-about ul li a:hover {
+    text-decoration: underline;
+}
+.line {
+    color: #ffffff; 
+}
+
+/*--------------------------- RESPONSIVE -------------------*/
+@media (max-width: 768px) {
+    .footer-logo {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-about ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+/*----------------------------------------------------------*/

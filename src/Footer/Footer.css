@@ -1,0 +1,28 @@
+/*--------------------------- Footer Main-Section -------------------*/
+.footer-main {
+    background-color: #101010; /* Black background */
+    padding: 20px 0; /* Restore balanced padding */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*--------------- Whole Top ------*/
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/*--------------------------- RESPONSIVE -------------------*/
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px; 
+    }
+}
+/*----------------------------------------------------------*/

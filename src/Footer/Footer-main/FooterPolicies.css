@@ -1,0 +1,36 @@
+/*--------------------------- Whole Bottom -------------------*/
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.footer-bottom ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-bottom ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-bottom ul li a:hover {
+    text-decoration: underline;
+}
+.dot {
+    color: #ffffff; 
+}
+
+/*--------------------------- RESPONSIVE -------------------*/
+@media (max-width: 768px) {
+    .footer-bottom ul {
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+}
+/*----------------------------------------------------------*/

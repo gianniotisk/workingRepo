@@ -1,0 +1,19 @@
+/* Copyright Section */
+.footer-copyright {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-copyright p {
+    color: #2b2b2b;
+}
+
+/* Responsive styles for FooterCopyright */
+@media (max-width: 768px) {
+    .footer-copyright {
+        padding: 15px 0; /* Adjust padding for mobile */
+    }
+}

@@ -1,0 +1,19 @@
+#news-container {
+    border: 1px solid black;
+    margin-block: 30px;
+}
+
+.news-posts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .tnews-posts {
+        grid-template-columns: 1fr;
+    }
+}

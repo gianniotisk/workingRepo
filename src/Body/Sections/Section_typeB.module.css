@@ -1,0 +1,8 @@
+.sectionB{
+    padding-block: 20px;
+}
+.container{
+    width: 90%;
+    max-width: 1300px;
+    margin-inline: auto;
+}

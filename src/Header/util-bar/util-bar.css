@@ -1,0 +1,34 @@
+/*______________________________ Utility Bar __________________________*/
+.util-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #101010;
+    width: 100%;
+    height: 75px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 5px 0; 
+    border-bottom: 1px solid rgba(217, 217, 217, 0.38); 
+    z-index: 1;
+    overflow: visible;
+}
+
+.header-pic {
+    height: 55px;
+    cursor: pointer; 
+}
+
+/*--------------------------- RESPONSIVE -------------------*/
+@media (max-width: 768px) {
+    .header-pic {
+        height: 50px;
+    }
+
+    .dropdown-toggle {
+        font-size: 12px; /* Reduce font size */
+        padding: 0 10px; /* Compact padding */
+    }
+}
+/*----------------------------------------------------------*/

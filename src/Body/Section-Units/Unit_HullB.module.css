@@ -1,0 +1,14 @@
+.hullB {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .hullB {
+        grid-template-columns: 1fr;
+    }
+}
