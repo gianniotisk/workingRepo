@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Part_Meta.module.css";
-import Comments from "../../assets/Body/Section-Parts/Comments.png";
+import Comments from "../../../assets/Body/Section-Parts/Comments.png";
 
 export default function Part_Meta({ meta }) {
   return (

@@ -1,20 +1,22 @@
-import { useState } from 'react'
-
-import './App.css'
-
-import Header from "./Header/Header"
-import Footer from './Footer/Footer'
-import Body from './Body/Body'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./Website-Pages/Page_Home";  // Home Page Component
+import About from "./Website-Pages/About"; // About Page Component
 
 export default function App() {
+    return (
+        <Router>
+            {/* Navigation Bar */}
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+            </nav>
 
-  return (
-
-    <div className="Web-frame">
-      <Header />
-      <Body />
-      <Footer />
-    </div>
-
-  )
+            {/* Page Routing */}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </Router>
+    );
 }

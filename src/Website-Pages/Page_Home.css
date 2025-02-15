@@ -1,0 +1,14 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  height: 100%; /* Ensure the body stretches to full height */
+  margin: 0;
+}
+
+.Web-frame {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Ensure it stretches full width */
+}

@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Part_Tags.module.css"
-import Icon from "../../assets/Body/Section-Parts/Tags.png";
+import Icon from "../../../assets/Body/Section-Parts/Tags.png";
 
 export default function Part_Tags({ tags }) {
   return (

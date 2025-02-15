@@ -1,5 +1,5 @@
 import React from "react";
-import Bookadd from "../../assets/Body/Section-Bits/Bookadd.png"
+import Bookadd from "../../../assets/Body/Section-Bits/Bookadd.png"
 
 export default function Bit_Bookmark() {
   const styles = {

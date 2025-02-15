@@ -10,7 +10,7 @@
     align-items: center; 
     justify-content: space-between; 
     padding: 5px 0; 
-    border-bottom: 1px solid rgba(217, 217, 217, 0.38); 
+    border-bottom: 1px solid rgba(217, 217, 217, 0.38);
     z-index: 3;
     overflow: visible;
 }

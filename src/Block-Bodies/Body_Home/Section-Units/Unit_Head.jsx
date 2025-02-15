@@ -1,8 +1,8 @@
 import React from "react";
 import "./Unit_Head.css";
 
-import Marker1 from "../../assets/General/Mark-rect.png"
-import Marker2 from "../../assets/General/Mark-arr.png"
+import Marker1 from "../../../assets/General/Mark-rect.png"
+import Marker2 from "../../../assets/General/Mark-arr.png"
 
 export default function Header_component ({ title, moreLink}){
     return (
