@@ -1,7 +1,8 @@
 import oscars from "../../assets/Pictures/oscars.png";
 import theboys from "../../assets/Pictures/theboys.png";
-import lastofus from "../../assets/Pictures/lastofus.jpg";
+import lastofus from "../../assets/Pictures/lastofus.png";
 import castlevania from "../../assets/Pictures/castlevania.png";
+import dune from "../../assets/Pictures/dunepart2.png";
 
 const NewsPosts = [
   {
@@ -9,7 +10,7 @@ const NewsPosts = [
     image: oscars,
     meta: {
       author: "Finch",
-      date: "1/01/2025",
+      date: "3 weeks ago",
       comments: 101
     },
     tags: ["Oscars"],
@@ -20,10 +21,10 @@ const NewsPosts = [
     image: theboys,
     meta: {
       author: "Prime Video",
-      date: "10/01/2025",
+      date: "8 days ago",
       comments: 205
     },
-    tags: ["The Boys", "Anthony Star"],
+    tags: ["The Boys", "Anthony Starr"],
     label: "News"
   },
   {
@@ -31,7 +32,7 @@ const NewsPosts = [
     image: lastofus,
     meta: {
       author: "Outsource",
-      date: "10/01/2025",
+      date: "9 months ago",
       comments: 239
     },
     tags: ["Pedro Pascal", "The Last of Us"],
@@ -42,10 +43,21 @@ const NewsPosts = [
     image: castlevania,
     meta: {
       author: "Netflix",
-      date: "16/01/2025",
+      date: "2 weeks ago",
       comments: 68
     },
     tags: ["Castlevania", "Vampire", "Anime"],
+    label: "News"
+  },
+  {
+    title: "\"Dune: Part Two\" Official Trailer Released",
+    image: dune,
+    meta: {
+      author: "Warner Bros",
+      date: "5 days ago",
+      comments: 312
+    },
+    tags: ["Dune", "Timothée Chalamet", "Zendaya", "Sci-Fi"],
     label: "News"
   }
 ];

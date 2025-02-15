@@ -1,7 +1,8 @@
 import gerard from "../../assets/Pictures/gerard.png";
 import squid from "../../assets/Pictures/squid.png";
-import lastofus from "../../assets/Pictures/lastofus.jpg";
+import lastofus from "../../assets/Pictures/lastofus.png";
 import ironman from "../../assets/Pictures/ironman.png";
+import avatar3 from "../../assets/Pictures/avatar3.png";
 
 const TrendingPosts = [
   {
@@ -49,14 +50,14 @@ const TrendingPosts = [
     label: null
   },
   {
-    title: "Surprising Iron Man Villain To Make MCU Return In Upcoming Vision Series",
-    image: ironman,
+    title: "Avatar 3 First Look Revealed – James Cameron Teases New Pandora Region",
+    image: avatar3,
     meta: {
-      author: "Matthew Rudoy",
-      date: "5 months ago",
-      comments: 117
+      author: "James Cameron",
+      date: "2 months ago",
+      comments: 276
     },
-    tags: ["Iron Man", "Robert Downey Jr."],
+    tags: ["Avatar 3", "James Cameron", "Sci-Fi"],
     label: null
   }
 ];

@@ -1,19 +1,18 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Section_typeB.module.css";
+import styles from "./Section.module.css";
 
 import Unit_Head from "../Section-Units/Unit_Head.jsx";
-import Unit_HullB from "../Section-Units/Unit_HullB.jsx";
+import Unit_Hull from "../Section-Units/Unit_Hull.jsx";
 
-export default function Section_typeB({ title, moreLink, postsData, sectionId }) {
+export default function Section({ title, moreLink, postsData, sectionId, type }) {
     return (
-        <section id={sectionId} className={styles.sectionB}>
+        <section id={sectionId} className={styles[`section${type}`] || styles.defaultSection}>
 
             <div className={styles.container}>
                 {/*------------------------------ Section Head -----------*/}
                 <Unit_Head title={title} moreLink={moreLink} />
                 {/*------------------------------ Section Content --------*/}
-                <Unit_HullB postsData={postsData} />
+                <Unit_Hull postsData={postsData} type={type}/>
             </div>
 
         </section>
