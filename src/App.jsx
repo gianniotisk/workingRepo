@@ -7,13 +7,6 @@ import Bookmarks from "./Website-Pages/Page_Bookmark"; //Bookmarks Page Componen
 export default function App() {
   return (
     <Router>
-      {/* Navigation Bar */}
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-
-      {/* Page Routing */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
