@@ -6,13 +6,6 @@ import About from "./Website-Pages/About"; // About Page Component
 export default function App() {
     return (
         <Router>
-            {/* Navigation Bar */}
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-            </nav>
-
-            {/* Page Routing */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

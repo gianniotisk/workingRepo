@@ -1,0 +1,58 @@
+.featured {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px;
+    position: relative; /* Important for absolute positioning */
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin-inline: auto;
+    position: relative; /* Needed for absolute-positioned arrows */
+}
+
+/* Image Display Window */
+.carouselDisplay {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Navigation Buttons */
+.carouselBtn {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent grey background */
+    border: none;
+    border-radius: 8px; 
+    width: 40px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1;
+}
+.carouselBtn:hover {
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+.carouselBtn img {
+    width: 15px;
+    height: 30px;
+}
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+

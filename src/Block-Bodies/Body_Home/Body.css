@@ -1,11 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .Whole-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: auto;
     background-color: #f0f0f0;
-    margin-top: 75px;
-    padding-block: 50px;
+    padding-block: 70px;
 }
 
 .content {

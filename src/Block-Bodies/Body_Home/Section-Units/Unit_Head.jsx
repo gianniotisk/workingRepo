@@ -1,5 +1,5 @@
 import React from "react";
-import "./Unit_Head.css";
+import styles from "./Unit_Head.module.css"
 
 import Marker1 from "../../../assets/General/Mark-rect.png"
 import Marker2 from "../../../assets/General/Mark-arr.png"
@@ -7,25 +7,25 @@ import Marker2 from "../../../assets/General/Mark-arr.png"
 export default function Header_component ({ title, moreLink}){
     return (
 
-        <div className="section-header">
+        <div className={styles.frame}>
             {/*---------------------------- Section Title ------*/}
-            <div className="section-title">
+            <div className={styles.title}>
                 <img 
                     src={Marker1} 
                     alt="Marker" 
-                    className="marker-icon" 
+                    className={styles.icon}
                 />
                 <h2>{title}</h2>
             </div>
             {/*---------------------------- Section More -------*/}
-            <div className="section-more">
-                <a href={moreLink} className="more-link">
+            <div className={styles.more}>
+                <a href={moreLink} className={styles.link}>
                     MORE
                 </a>
                 <img 
                     src={Marker2} 
                     alt="Pointer" 
-                    className="marker-icon" 
+                    className={styles.icon}
                 />
             </div>
             {/*-------------------------------------------------*/}
