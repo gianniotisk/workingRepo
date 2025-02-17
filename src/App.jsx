@@ -1,22 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Website-Pages/Page_Home";  // Home Page Component
+import Home from "./Website-Pages/Page_Home"; // Home Page Component
 import About from "./Website-Pages/About"; // About Page Component
+import Bookmarks from "./Website-Pages/Page_Bookmark"; //Bookmarks Page Component
 
 export default function App() {
-    return (
-        <Router>
-            {/* Navigation Bar */}
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-            </nav>
+  return (
+    <Router>
+      {/* Navigation Bar */}
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
 
-            {/* Page Routing */}
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-            </Routes>
-        </Router>
-    );
+      {/* Page Routing */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/bookmarks" element={<Bookmarks />} />
+      </Routes>
+    </Router>
+  );
 }
