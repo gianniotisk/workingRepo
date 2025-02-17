@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Unit_CardC.module.css";
 
 import playIcon from "../../../assets/Body/play.png";
-import plusIcon from "../../../assets/Body/plus.png";
 import starEmpty from "../../../assets/Body/star-e.png";
 import starFull from "../../../assets/Body/star-f.png";
 
 export default function Unit_CardC({ title, image, rating }) {
+  const post = { title, image, rating }; // A post so it can be stored for bookmarking
+
+  const [bookadded, setBookadded] = useState(false);
+
+  useEffect(() => {
+    const savedMovies =
+      JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
+    setBookadded(savedMovies.some((item) => item.title === post.title));
+  }, [post]);
+
+  const handleBookmarkMovie = () => {
+    let savedMovies =
+      JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
+
+    if (bookadded) {
+      // remove bookmarks
+      savedMovies = savedMovies.filter((item) => item.title !== post.title);
+    } else {
+      // no duplicates
+      if (!savedMovies.some((item) => item.title === post.title)) {
+        savedMovies.push(post);
+      }
+    }
+
+    localStorage.setItem("bookmarkedMovies", JSON.stringify(savedMovies));
+    setBookadded(!bookadded); // Toggle button state
+  };
+
   return (
     <div className={styles.card}>
-
       {/*------------------------------ Display Segment ------------------*/}
       <div className={styles.cardImage}>
         <img src={image} alt={`${title} Poster`} className={styles.poster} />
-        <img src={plusIcon} alt="Bookmark Icon" className={styles.bookmarkIcon} />
       </div>
 
       {/*------------------------------ Content Segment -------------------*/}
@@ -35,14 +60,15 @@ export default function Unit_CardC({ title, image, rating }) {
 
         {/* Buttons */}
         <div className={styles.cardButtons}>
-          <button className={styles.watchlistBtn}>Add to Watchlist</button>
+          <button className={styles.watchlistBtn} onClick={handleBookmarkMovie}>
+            {bookadded ? "Remove from Watchlist" : "Add to Watchlist"}
+          </button>
           <button className={styles.trailerBtn}>
             <img src={playIcon} alt="Play Icon" className={styles.playIcon} />
             Watch Trailer
           </button>
         </div>
       </div>
-
     </div>
   );
 }

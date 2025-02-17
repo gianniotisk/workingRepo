@@ -7,15 +7,16 @@ import Bit_Label from "../Section-Bits/Bit_Label";
 import Bit_Bookmark from "../Section-Bits/Bit_Bookmark";
 
 export default function Unit_CardB({ title, image, meta, tags, label }) {
+  const post = { title, image, meta, tags, label }; // A post so it can be stored for bookmarking
+
   return (
     <div className={styles.card}>
-      
       {/*------------------------------ Display Segment ------------------*/}
       <div className={styles.display}>
         <img src={image} alt="Card Image" />
         <Bit_Label label={label} />
-        <Bit_Bookmark />
-        <Part_Tags tags={tags.slice(0, 1)} />  
+        <Bit_Bookmark post={post} />
+        <Part_Tags tags={tags.slice(0, 1)} />
       </div>
 
       {/*------------------------------ Content Segment -------------------*/}
@@ -23,7 +24,6 @@ export default function Unit_CardB({ title, image, meta, tags, label }) {
         <h4>{title}</h4>
         <Part_Meta meta={meta} />
       </div>
-
     </div>
   );
 }
