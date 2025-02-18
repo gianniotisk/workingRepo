@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Movies.module.css";
+import { Link } from "react-router-dom";
 
 import STAR from "../assets/Body/star-f.png";
 
@@ -128,7 +129,7 @@ const Movies = () => {
       <section className={styles.moviesDisplay}>
         {displayedMovies.map((movie) => (
           <span className={styles.movieItem} key={movie.id}>
-            <a href={`/movie-details/${movie.id}`}>
+            <Link to={`/movieDetails/${movie.id}`}>
               <img
                 src={movie.imageUrl}
                 alt={`${movie.title} poster`}
@@ -136,18 +137,18 @@ const Movies = () => {
                 onMouseEnter={() => setHoveredMovie(movie.id)}
                 onMouseLeave={() => setHoveredMovie(null)}
               />
-              <p className={styles.movieSpecs}>
-                <span className={styles.movieTitle}>{movie.title}</span>
-                <br />
-                <strong>Year:</strong> {movie.year}
-                <img
-                  src={STAR}
-                  className={styles.ratingImage}
-                  alt="Rating Star"
-                />
-                {movie.userScore}
-              </p>
-            </a>
+            </Link>
+            <p className={styles.movieSpecs}>
+              <span className={styles.movieTitle}>{movie.title}</span>
+              <br />
+              <strong>Year:</strong> {movie.year}
+              <img
+                src={STAR}
+                className={styles.ratingImage}
+                alt="Rating Star"
+              />
+              {movie.userScore}
+            </p>
 
             {/* Hover Box for when you hover over a movie poster */}
             {hoveredMovie === movie.id && (

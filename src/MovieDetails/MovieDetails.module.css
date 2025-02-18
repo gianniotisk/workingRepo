@@ -1,0 +1,259 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+  
+.WholeBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    background-color: #f0f0f0;
+    margin-top: 75px;
+    padding-block: 50px;
+}
+  
+.title{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.mainTitle {
+    font-weight: bold;
+    font-size: 50px;
+    padding: 5px;
+    text-align: center;
+    display: block;
+}
+  
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+  
+.movieDetails {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+  
+.moviePoster {
+    width: 30%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+  
+.movieInfo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.starContainer {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.generalInformation {
+    margin-top: 10px;
+    text-align: center;
+}
+  
+.starToggle {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.starToggle .star,
+.starToggle .starFilled {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.starToggle .starFilled {
+    display: none;
+}
+
+.starToggle input:checked + .star {
+    display: none;
+}
+
+.starToggle input:checked ~ .starFilled {
+    display: block;
+}
+  
+.plot {
+    margin-top: 10px;
+    background-color: #D9D9D9;
+    padding: 10px;
+    display: inline-block;
+    max-width: 100%;
+}
+  
+.plot header {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+  
+.plot p {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+  
+.scores p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+  
+.genreAndCastList li{
+   list-style: none;
+   padding: 2px;
+}
+  
+section {
+    padding: 20px;
+}
+  
+.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+  
+.chat ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+  
+.chatHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+  
+.chatItem {
+    background-color: #D9D9D9;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+  
+.chatItem:not(:last-child) {
+    margin-bottom: 15px;
+}
+  
+.chatItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+  
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+  
+.pagination button:hover {
+    background-color: #ddd;
+}
+  
+.pagination button.active {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+}
+  
+
+  
+@media (max-width: 768px) {
+    .movieDetails {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .moviePoster {
+        width: 70%;
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .movieInfo {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    header {
+        font-size: 1.2rem;
+    }
+
+    #plot p {
+        font-size: 0.9rem;
+    }
+
+    .chat {
+        padding: 10px;
+    }
+
+    .chatHeader {
+        font-size: 1.2rem;
+    }
+
+    .chatItem {
+        max-width: 80%;
+    }
+
+    .chatItems {
+        gap: 8px;
+    }
+
+    .chat input {
+        width: 80%;
+        max-width: 300px;
+        font-size: 0.9rem;
+    }
+
+    .chat .chatButtons {
+        gap: 10px;
+    }
+
+    .chat button {
+        flex: 1;
+        max-width: 150px;
+        font-size: 0.9rem;
+    }
+}
