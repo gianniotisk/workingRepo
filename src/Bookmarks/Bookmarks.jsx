@@ -1,14 +1,14 @@
 import { useState } from "react";
-import "./Bookmarks.css";
+import styles from "./Bookmarks.module.css";
 
-import Posts from "./Posts/Posts";
-import Movies from "./Movies/Movies";
+import Posts from "./Posts/PostBookmarks";
+import Movies from "./Movies/MovieBookmarks";
 
 export default function Bookmarks() {
   return (
-    <div className="Whole-body">
-      <header className="bookMarkTitle">Your Bookmarks</header>
-      <section>
+    <div className={styles.WholeBody}>
+      <header className={styles.bookMarkTitle}>Your Bookmarks</header>
+      <section className={styles.postAndMoviesDisplay}>
         <Posts />
         <Movies />
       </section>

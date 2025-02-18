@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./posts.module.css";
+import styles from "./PostBookmarks.module.css";
 
 export default function Posts() {
   const [bookmarkedPosts, setBookmarkedPosts] = useState([]);

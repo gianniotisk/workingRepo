@@ -1,4 +1,4 @@
-.Whole-body {
+.WholeBody {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,8 +24,8 @@
     padding: 15px;
 }
 
-section > * {
+.postAndMoviesDisplay > * {
     display: block;
     width: 80%;
     margin-bottom: 20px;
-  }
+}
