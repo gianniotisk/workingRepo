@@ -11,6 +11,7 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [reviews, setReviews] = useState([]);
+  const [bookadded, setBookadded] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -18,18 +19,29 @@ const MovieDetails = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        const movieKey = Object.keys(data)[0];
-        const movieData = data[movieKey];
-        setMovie({
-          title: movieData.title,
-          imageUrl: movieData.imageUrl,
-          year: movieData.releaseYear,
-          userScore: movieData.score,
-          description: movieData.summary,
-          director: movieData.director,
-          cast: movieData.cast || [],
-          genres: movieData.genres || [],
-        });
+        if (data && Object.keys(data).length > 0) {
+          const movieKey = Object.keys(data)[0];
+          const movieData = data[movieKey];
+          const movieObject = {
+            id,
+            title: movieData.title,
+            image: movieData.imageUrl,
+            imageUrl: movieData.imageUrl,
+            year: movieData.releaseYear,
+            userScore: movieData.score,
+            rating: movieData.score,
+            description: movieData.summary,
+            director: movieData.director,
+            cast: movieData.cast || [],
+            genres: movieData.genres || [],
+          };
+          setMovie(movieObject);
+
+          // Check if the movie is already bookmarked
+          const savedMovies =
+            JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
+          setBookadded(savedMovies.some((item) => item.id === id));
+        }
       });
   }, [id]);
 
@@ -64,6 +76,24 @@ const MovieDetails = () => {
       });
   };
 
+  const handleBookmarkMovie = () => {
+    let savedMovies =
+      JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
+
+    if (bookadded) {
+      // Remove bookmark
+      savedMovies = savedMovies.filter((item) => item.id !== id);
+    } else {
+      // Add bookmark if not already saved
+      if (!savedMovies.some((item) => item.id === id)) {
+        savedMovies.push(movie);
+      }
+    }
+
+    localStorage.setItem("bookmarkedMovies", JSON.stringify(savedMovies));
+    setBookadded(!bookadded);
+  };
+
   if (!movie) return <p>Loading...</p>;
 
   return (
@@ -79,17 +109,11 @@ const MovieDetails = () => {
           <header className={styles.mainTitle}>{movie.title}</header>
 
           <div className={styles.starContainer}>
-            <label className={styles.starToggle}>
-              <input type="checkbox" hidden />
+            <label className={styles.starToggle} onClick={handleBookmarkMovie}>
               <img
-                src={EMPTYSTAR}
-                alt="Bookmark Icon Empty"
+                src={bookadded ? FILLEDSTAR : EMPTYSTAR}
+                alt="Bookmark Icon"
                 className={styles.star}
-              />
-              <img
-                src={FILLEDSTAR}
-                alt="Bookmark Icon Filled"
-                className={styles.starFilled}
               />
             </label>
           </div>

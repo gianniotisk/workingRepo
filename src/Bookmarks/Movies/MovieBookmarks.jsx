@@ -5,7 +5,6 @@ export default function MovieBookmarks() {
   const [bookmarkedMovies, setBookmarkedMovies] = useState([]);
 
   useEffect(() => {
-    // Load Bookmarked Movies (Unit_CardC)
     const savedMovies =
       JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
     setBookmarkedMovies(savedMovies);
@@ -13,7 +12,6 @@ export default function MovieBookmarks() {
 
   return (
     <div>
-      {/* --------------------- Bookmarked Movies Section --------------------- */}
       <section className={styles.bookmarkSection}>
         <h2 className={styles.subHeader}>Movies</h2>
         <div className={styles.bookmarksContainer}>
