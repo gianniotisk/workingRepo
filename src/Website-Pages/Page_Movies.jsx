@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-import "./Page_Bookmark.css";
+import "./Page_Movies.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Bookmarks from "../Bookmarks/Bookmarks";
+import Movies from "../Movies/Movies";
 
 export default function App() {
   return (
     <div className="Web-frame">
       <Header />
-      <Bookmarks />
+      <Movies />
       <Footer />
     </div>
   );
