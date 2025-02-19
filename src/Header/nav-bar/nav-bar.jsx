@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./nav-bar.css"
 
@@ -44,7 +45,7 @@ export default function Nav_Bar({ toggleMenu }){
                     </li>
                     <li className="dot">•</li>
                     <li>
-                        <a href="#">Forum</a>
+                        <Link to="/Forum">Forum</Link>
                     </li>
                 </ul>
 

@@ -1,0 +1,86 @@
+.card {
+    position: relative;
+    width: 100%; /* Let it scale dynamically */
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Ensures spacing but keeps cards responsive */
+.frame {
+    margin-inline: 8px;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Image */
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Content box at the bottom with a fade */
+.content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    height: 80px; /* Adjusted for better scaling */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    text-align: left;
+}
+
+/* Title Styling */
+.title {
+    margin-inline: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+/* Underline on hover */
+.title:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        height: auto;
+    }
+
+    .content {
+        height: 70px; /* Adjust text box for smaller screens */
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        aspect-ratio: 16 / 9; /* Slightly taller for small screens */
+    }
+
+    .content {
+        height: 60px;
+        padding: 8px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+}

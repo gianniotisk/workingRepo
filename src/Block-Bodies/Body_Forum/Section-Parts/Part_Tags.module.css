@@ -1,0 +1,57 @@
+.frame {
+    display: flex;
+    gap: 10px;                      /* Space between tags */
+    align-items: center;
+    position: absolute;
+    bottom: 10px;                   /* Stick to the bottom */
+    left: 50%;                      /* Move to the center horizontally */
+    transform: translateX(-50%);    /* Perfect horizontal centering */
+    overflow: hidden;               /* Hide overflowing content */
+    white-space: nowrap;            /* Prevent line breaks */
+    max-width: 94%;                /* Ensure frame doesn't overflow parent */
+}
+
+/* Tag Box */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    height: 25px;
+    max-width: 200px;               /* Limit the max size */
+    flex: 1 1 auto;                 /* ✅ Allow boxes to shrink if needed */
+    min-width: 50px;                /* Prevent them from shrinking too much */
+    overflow: hidden;               /* Hide overflowing text */
+    text-overflow: ellipsis;        /* Show "..." when text overflows */
+    white-space: nowrap;            /* Keep text in one line */
+}
+
+/* Tag Text */
+.box span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;                /* Ensure text doesn't exceed box width */
+}
+
+/* Tag Icon */
+.icon {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    padding: 2px;
+    flex-shrink: 0;                 /* Prevent icon from shrinking */
+}
+
+/* Hover Effect */
+.box:hover,
+.icon:hover {
+    background-color: #ffffff50;
+}

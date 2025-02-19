@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./util-bar.css"
 
@@ -14,11 +15,11 @@ export default function Util_Bar(){
             <div className="container">
 
                 {/* ----------- Logo Icon-------------- */}
-                <img className="header-pic" src={LOGO} alt="Finch Logo" />
-
+                <Link to="/">
+                    <img className="header-pic" src={LOGO} alt="Finch Logo" />
+                </Link>
                 {/* ----------- Search Bar ------------ */}
                 <Search_Bar/>
-
                 {/* ----------- Signin Icon ----------- */}
                 <img className="header-pic" src={SIGNIN} alt="Sign In" />
 

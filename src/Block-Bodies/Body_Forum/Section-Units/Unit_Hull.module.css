@@ -1,0 +1,54 @@
+.hullA {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+
+.hullB {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+
+.hullC {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.hullE {
+    display: flex;           /* Use flexbox for vertical stacking */
+    flex-direction: column;  /* Stack cards vertically */
+    gap: 20px;               /* Space between cards */
+    width: 100%;             /* Full width */
+    padding-top: 15px;       /* Consistent padding at the top */
+    align-items: stretch;    /* Ensure cards take up full width */
+}
+
+.defaultHull {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .hullB {
+        grid-template-columns: 1fr;
+    }
+
+    .defaultHull {
+        grid-template-columns: 1fr;
+    }
+}
