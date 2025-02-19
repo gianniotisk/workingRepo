@@ -55,11 +55,11 @@ export default function SearchResults() {
 
   return (
     <div className={styles.WholeBody}>
-      <div className="search-results">
-        <header>Your results for {searchQuery}</header>
+      <div className={styles.searchResults}>
+        <header>Results for : {searchQuery}</header>
 
         {searchResults.length === 0 ? (
-          <p>No results found.</p>
+          <p>No search results found!</p>
         ) : (
           <ul>
             {searchResults.map((item) => (
