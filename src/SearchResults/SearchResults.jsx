@@ -55,9 +55,8 @@ export default function SearchResults() {
 
   return (
     <div className={styles.WholeBody}>
+      <header className={styles.title}>Results for : {searchQuery}</header>
       <div className={styles.searchResults}>
-        <header>Results for : {searchQuery}</header>
-
         {searchResults.length === 0 ? (
           <p>No search results found!</p>
         ) : (
@@ -65,14 +64,36 @@ export default function SearchResults() {
             {searchResults.map((item) => (
               <li key={item.id}>
                 {item.category === "movies" ? (
-                  <Link to={`/movieDetails/${item.id}`}>
-                    <img src={item.imageUrl} alt={item.title} />
-                    {item.title} ({item.releaseYear})
+                  <Link
+                    to={`/movieDetails/${item.id}`}
+                    className={styles.resultItem}
+                  >
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className={styles.image}
+                    />
+                    <span className={styles.itemSpecs}>
+                      <span className={styles.titleResult}>{item.title}</span>
+                      <div className={styles.yearScoreResult}>
+                        Year : {item.releaseYear} | Score: {item.score}
+                      </div>
+                    </span>
                   </Link>
                 ) : (
-                  <Link to={`/crew-details/${item.name}`}>
-                    <img src={item.imageUrl} alt={item.name} />
-                    {item.name} - {item.role}
+                  <Link
+                    to={`/crew-details/${item.name}`}
+                    className={styles.resultItem}
+                  >
+                    <img
+                      src={item.imageUrl}
+                      alt={item.name}
+                      className={styles.image}
+                    />
+                    <span className={styles.itemSpecs}>
+                      <span className={styles.titleResult}>{item.name}</span>
+                      <div className={styles.yearScoreResult}>{item.role}</div>
+                    </span>
                   </Link>
                 )}
               </li>
