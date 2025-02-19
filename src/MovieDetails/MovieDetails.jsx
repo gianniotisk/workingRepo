@@ -25,8 +25,8 @@ const MovieDetails = () => {
           const movieObject = {
             id,
             title: movieData.title,
-            image: movieData.imageUrl,
-            imageUrl: movieData.imageUrl,
+            image: movieData.imageUrl, // This saves images for UnitCard_C in the homepage
+            imageUrl: movieData.imageUrl, //This saves images from Movies in the MovieDetails
             year: movieData.releaseYear,
             userScore: movieData.score,
             rating: movieData.score,
