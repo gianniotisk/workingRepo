@@ -193,7 +193,7 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </button>
                     </div>
                 )}
-
+                <br/>
                 <button className={styles.createPostBtn}>
                     Create a Post
                 </button>

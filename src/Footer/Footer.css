@@ -1,4 +1,7 @@
 /*--------------------------- Footer Main-Section -------------------*/
+.footer{
+    margin-top: 30px;
+}
 .footer-main {
     background-color: #101010; /* Black background */
     padding: 20px 0; /* Restore balanced padding */
