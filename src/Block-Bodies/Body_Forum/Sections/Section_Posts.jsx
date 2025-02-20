@@ -7,6 +7,7 @@ import gridIcon from "../../../assets/General/Grid-View.png";
 import lineIcon from "../../../assets/General/Line-View.png";
 
 import Unit_Hull from "../Section-Units/Unit_Hull.jsx";
+import HeaderComponent from "../Section-Units/Unit_Head.jsx";
 
 export default function Section_Post({ title, postsData, sectionId }) {
     const [filter, setFilter] = useState("All Posts");
@@ -14,8 +15,8 @@ export default function Section_Post({ title, postsData, sectionId }) {
     const [category, setCategory] = useState("All");
     const [viewMode, setViewMode] = useState("list"); // Default: List View
     const [currentPage, setCurrentPage] = useState(1);
-    const postsPerPage = 6;
-
+    const postsPerPage = viewMode === "grid" ? 8 : 8; 
+    
     // Filter posts by category
     const filteredPosts = postsData.filter(post =>
         (filter === "All Posts" || post.type === filter) &&
@@ -58,35 +59,46 @@ export default function Section_Post({ title, postsData, sectionId }) {
         <section id={sectionId} className={styles.sectionPost}>
             <div className={styles.container}>
 
+                <HeaderComponent title="Community Forum Posts" />
+
                 {/*------------------------------ Filter & View Toggle Box -----------*/}
                 <div className={styles.filterBox}>
                     <div className={styles.filterOptions}>
+
                         {/* Show Posts */}
-                        <label>Show Posts:</label>
-                        <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-                            <option value="All Posts">All Posts</option>
-                            <option value="Featured">Featured</option>
-                            <option value="News">News</option>
-                        </select>
+                        <div className={styles.filterItem}>
+                            <label>Show Posts:</label>
+                            <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+                                <option value="All Posts">All Posts</option>
+                                <option value="Featured">Featured</option>
+                                <option value="News">News</option>
+                            </select>
+                        </div>
 
                         {/* Sort By */}
-                        <label>Sort By:</label>
-                        <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                            <option value="Latest">Latest</option>
-                            <option value="Trending">Trending</option>
-                        </select>
+                        <div className={styles.filterItem}>
+                            <label>Sort By:</label>
+                            <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                                <option value="Latest">Latest</option>
+                                <option value="Trending">Trending</option>
+                            </select>
+                        </div>
 
                         {/* Category */}
-                        <label>Category:</label>
-                        <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                            <option value="All">All</option>
-                            <option value="Movies">Movies</option>
-                            <option value="Series">Series</option>
-                            <option value="Celebrities">Celebrities</option>
-                            <option value="Cast">Cast</option>
-                            <option value="Awards">Awards</option>
-                        </select>
+                        <div className={styles.filterItem}>
+                            <label>Category:</label>
+                            <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                                <option value="All">All</option>
+                                <option value="Movies">Movies</option>
+                                <option value="Series">Series</option>
+                                <option value="Celebrities">Celebrities</option>
+                                <option value="Cast">Cast</option>
+                                <option value="Awards">Awards</option>
+                            </select>
+                        </div>
+
                     </div>
+
 
                     {/* View Toggle Buttons */}
                     <div className={styles.viewToggle}>
@@ -105,6 +117,39 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </button>
                     </div>
                 </div>
+
+                {totalPages > 1 && (
+                    <div className={styles.pagination}>
+                        {/* Prev Button */}
+                        <button 
+                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                            disabled={currentPage === 1}
+                            className={styles.arrowBtn}
+                        >
+                            <img src={arrL} alt="Previous" />
+                        </button>
+
+                        {/* Page Numbers */}
+                        {getPaginationNumbers().map((page, index) => (
+                            <button
+                                key={index}
+                                onClick={() => typeof page === "number" && setCurrentPage(page)}
+                                className={`${styles.pageBtn} ${page === currentPage ? styles.active : ""}`}
+                                disabled={page === "..."}>
+                                {page}
+                            </button>
+                        ))}
+
+                        {/* Next Button */}
+                        <button 
+                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                            disabled={currentPage === totalPages}
+                            className={styles.arrowBtn}
+                        >
+                            <img src={arrR} alt="Next" />
+                        </button>
+                    </div>
+                )}
 
                 {/*------------------------------ Section Content --------*/}
                 <div className={styles.postsWrapper}>
@@ -148,6 +193,10 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </button>
                     </div>
                 )}
+
+                <button className={styles.createPostBtn}>
+                    Create a Post
+                </button>
 
             </div>
         </section>
