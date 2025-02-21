@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Website-Pages/Page_Home"; // Home Page Component
+import Home from "./Website-Pages/Home"; // Home Page Component
 import About from "./Website-Pages/About"; // About Page Component
 import Bookmarks from "./Website-Pages/Page_Bookmark"; //Bookmarks Page Component
 import Forum from "./Website-Pages/Forum";

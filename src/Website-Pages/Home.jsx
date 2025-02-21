@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./Page_Home.css";
+import "./Pages.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
