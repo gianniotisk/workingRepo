@@ -1,40 +1,40 @@
-import gladiator2 from "../../../assets/Pictures/gladiator-2.png";
-import severance from "../../../assets/Pictures/severance.png";
-import silo from "../../../assets/Pictures/silo.png";
-import squidGame2 from "../../../assets/Pictures/squid-game-2.png";
-import wicked from "../../../assets/Pictures/wicked.png";
-import conclave from "../../../assets/Pictures/conclave.png";
+import fastAndfurious9 from "../../../assets/Pictures/fast&furious9.png";
+import parasite from "../../../assets/Pictures/parasite.png";
+import joker from "../../../assets/Pictures/joker.png";
+import nineteenseventeen from "../../../assets/Pictures/nineteenseventeen.png";
+import fordvferrari from "../../../assets/Pictures/fordvferrari.png";
+import littlewomen from "../../../assets/Pictures/littlewomen.png";
 
 const PopularContent = [
   {
-    title: "Gladiator II",
-    image: gladiator2,
-    rating: 8.8,
-  },
-  {
-    title: "Severance",
-    image: severance,
-    rating: 9.2,
-  },
-  {
-    title: "Silo",
-    image: silo,
-    rating: 8.5,
-  },
-  {
-    title: "Squid Game 2",
-    image: squidGame2,
-    rating: 9.0,
-  },
-  {
-    title: "Wicked",
-    image: wicked,
+    title: "Fast & Furious 9",
+    image: fastAndfurious9,
     rating: 8.7,
   },
   {
-    title: "Conclave",
-    image: conclave,
-    rating: 8.3,
+    title: "Parasite",
+    image: parasite,
+    rating: 8.6,
+  },
+  {
+    title: "Joker",
+    image: joker,
+    rating: 8.6,
+  },
+  {
+    title: "1917",
+    image: nineteenseventeen,
+    rating: 8.5,
+  },
+  {
+    title: "Ford v Ferrari",
+    image: fordvferrari,
+    rating: 8.2,
+  },
+  {
+    title: "Little Women",
+    image: littlewomen,
+    rating: 8.1,
   }
 ];
 
