@@ -1,3 +1,5 @@
+For the website, each page is based on the following organizational structure: 
+
 /Block
     /Section
         /Unit
@@ -12,7 +14,7 @@ Also a part can be made out smaller bits
 
 /Block_Header
 /Block_Body
-    /Section_Carousel
+    /Section_Featured
     
     /Section_Trending
         /Unit_Head
