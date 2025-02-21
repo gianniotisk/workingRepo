@@ -9,6 +9,9 @@ import Login from "./Login/Login"; //Login Page Component
 import Movies from "./Website-Pages/Page_Movies"; //All Movies Page Component
 import MovieDetails from "./Website-Pages/Page_MovieDetails"; //Individual Movie Page Component
 import SearchResults from "./Website-Pages/Page_SearchResults"; //Search Results Page Component
+import Crew from "./Website-Pages/Crew"; //Crew Page Component
+import CrewDetails from "./Website-Pages/CrewDetails"; //Individual Crew Page Component
+
 
 
 export default function App() {
@@ -24,6 +27,8 @@ export default function App() {
         <Route path="/movies" element={<Movies />} />
         <Route path="/movieDetails/:id" element={<MovieDetails />} />
         <Route path="/searchResults" element={<SearchResults />} />
+        <Route path="/crew" element={<Crew />} />
+        <Route path="/crewDetails/:name" element={<CrewDetails />} />
       </Routes>
     </Router>
   );

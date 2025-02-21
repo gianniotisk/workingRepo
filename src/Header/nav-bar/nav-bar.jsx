@@ -33,7 +33,13 @@ export default function Nav_Bar({ toggleMenu }) {
           </li>
           <li className="dot">•</li>
           <li>
-            <a href="#">Cast & Crew</a>
+            <Link
+              to={{
+                pathname: "/Crew",
+              }}
+            >
+              Cast & Crew
+            </Link>
           </li>
           <li className="dot">•</li>
           <li>
