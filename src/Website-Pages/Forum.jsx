@@ -6,7 +6,7 @@ import Header from "../Header/Header"
 import Footer from '../Footer/Footer'
 import Body from "../Block-Bodies/Body_Forum/Body_Forum"
 
-export default function App() {
+export default function Forum() {
   return (
 
     <div className="Web-frame">

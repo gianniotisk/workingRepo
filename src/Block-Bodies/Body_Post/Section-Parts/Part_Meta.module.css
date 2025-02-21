@@ -1,0 +1,73 @@
+.frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures everything stays in one line */
+    font-size: 12px;
+    color: #888;
+    margin-top: auto;
+    gap: 10px; /* Increased spacing for better readability */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    width: 100%;
+}
+
+/* Left Section - Author & Date */
+.infoLeft {
+    display: flex;
+    gap: 15px; /* Adjusted spacing */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Right Section - Comments */
+.infoRight {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Slightly increased spacing */
+    white-space: nowrap;
+    margin-left: auto; /* Pushes it to the right */
+}
+
+.comments {
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+    .frame {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .infoLeft {
+        gap: 10px;
+    }
+
+    .infoRight {
+        gap: 5px;
+    }
+
+    .comments {
+        width: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame {
+        flex-wrap: wrap; /* Allows wrapping only on very small screens */
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .infoLeft,
+    .infoRight {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .comments {
+        width: 12px;
+    }
+}

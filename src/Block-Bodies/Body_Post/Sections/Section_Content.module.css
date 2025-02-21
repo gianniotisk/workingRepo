@@ -1,0 +1,41 @@
+/* Whole Section */
+.contentSection {
+    background: #f9f9f9;
+    padding: 30px 0;
+}
+
+/* Content Layout */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Main Content */
+.essay {
+    flex: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Related Posts */
+.related {
+    flex: 1;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .container {
+        gap: 20px;
+    }
+
+    .essay,
+    .related {
+        width: 100%;
+    }
+}

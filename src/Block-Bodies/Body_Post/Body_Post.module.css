@@ -1,0 +1,14 @@
+.postPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Placeholder for other sections */
+.placeholder {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    margin-top: 20px;
+}

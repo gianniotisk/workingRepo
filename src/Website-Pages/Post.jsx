@@ -1,12 +1,11 @@
-import { useState } from 'react'
 
 import './Pages.css'
 
 import Header from "../Header/Header"
 import Footer from '../Footer/Footer'
-import Body from "../Block-Bodies/Body_Home/Body_Home"
+import Body from "../Block-Bodies/Body_Post/Body_Post"
 
-export default function Home() {
+export default function Post() {
 
   return (
 
