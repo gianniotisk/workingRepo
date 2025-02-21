@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./util-bar.css";
-import { Link } from "react-router";
 
 import Search_Bar from "./search-bar";
 
@@ -13,11 +13,7 @@ export default function Util_Bar() {
     <div className="util-bar">
       <div className="container">
         {/* ----------- Logo Icon-------------- */}
-        <Link
-          to={{
-            pathname: "/",
-          }}
-        >
+        <Link to="/">
           <img className="header-pic" src={LOGO} alt="Finch Logo" />
         </Link>
 

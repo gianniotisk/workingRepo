@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import "./nav-bar.css";
-import { Link } from "react-router";
 
 import BURGER from "../../assets/Header/burger.png";
 import BOOKS from "../../assets/Header/books.png";
@@ -43,9 +43,10 @@ export default function Nav_Bar({ toggleMenu }) {
           </li>
           <li className="dot">•</li>
           <li>
-            <a href="#">Forum</a>
+            <Link to="/Forum">Forum</Link>
           </li>
         </ul>
+
 
         {/*--------------------------- Bookmarks Button ---------------*/}
         <Link

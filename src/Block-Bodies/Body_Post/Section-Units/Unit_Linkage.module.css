@@ -1,0 +1,69 @@
+.linkage {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 50px;
+}
+
+/* Tags - Start from image alignment */
+.tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* Tag Heading */
+.tags h3 {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+/* Tag List */
+.tags ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Individual Tag */
+.tag {
+    font-size: 14px;
+    color: #333;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.tag:hover {
+    background-color: #c30505c2;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .linkage {
+        width: 20%; /* Adjusts for smaller screens */
+        padding-left: 0px;
+    }
+
+    .tags {
+        max-width: 180px;
+    }
+
+    .tag {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+}

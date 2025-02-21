@@ -1,0 +1,98 @@
+/* Featured Section */
+.featuredSection {
+    text-align: center;
+    background-color: #88888875;
+    padding: 20px 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Buttons */
+.carouselBtn {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 6px;
+    width: 35px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.carouselBtn:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.carouselBtn img {
+    width: 12px;
+    height: 25px;
+}
+
+/* Carousel Display */
+.carouselDisplay {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel Track */
+.carouselTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ensures full width */
+}
+
+/* Each carousel item */
+.carouselItem {
+    flex: 0 0 calc(100% / 3); /* Fits 3 items perfectly inside display */
+    max-width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .carouselItem {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: center;
+    }
+
+    .carouselItem {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carouselBtn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+}

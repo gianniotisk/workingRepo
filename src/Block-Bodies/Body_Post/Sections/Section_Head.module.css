@@ -1,0 +1,14 @@
+.headSection {
+    width: 100%;
+    background-color: #e0e0e0; /* Gray Background */
+    padding: 40px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}

@@ -11,7 +11,7 @@ import NewsPosts from "./PostsData/NewsContent.js"
 import PopularPosts from "./PostsData/PopularContent.js"
 import LatestPosts from './PostsData/LatestContent.js';
 
-export default function Body() {
+export default function Body_Home() {
     return (
         <main className='Whole-body'>
 
@@ -42,7 +42,7 @@ export default function Body() {
             />
 
             <Section_Latest
-                title="Popular Movies and Shows" 
+                title="Latest Posts" 
                 moreLink="#" 
                 postsData={LatestPosts} 
                 sectionId="popular-container"

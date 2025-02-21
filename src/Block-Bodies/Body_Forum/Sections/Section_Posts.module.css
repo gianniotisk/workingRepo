@@ -1,0 +1,219 @@
+/* Section Styling */
+.sectionPost {
+    text-align: center;
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 20px 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Filter Box */
+.filterBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Same color as cards */
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Left Side - Filter Options */
+.filterOptions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Each filter (label + dropdown) */
+.filterItem {
+    display: flex;
+    align-items: center; /* Keep text & dropdown in one line initially */
+    gap: 8px;
+    flex-wrap: wrap; /* Allows dropdown to move below when needed */
+}
+
+/* Labels */
+.filterItem label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap; /* Prevents label from breaking separately */
+}
+
+/* Dropdowns */
+.filterItem select {
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+    min-width: 120px; /* ✅ Smallest possible width while staying equal */
+    max-width: 150px; /* Ensures consistent dropdown sizing */
+}
+
+/* Right Side - View Toggle Buttons */
+.viewToggle {
+    display: flex;
+    gap: 10px;
+}
+
+/* View Toggle Buttons */
+.viewToggle button {
+    width: 36px;
+    height: 36px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* View Toggle Icons */
+.viewToggle button img {
+    width: 20px;
+    height: auto;
+}
+
+/* Active View */
+.viewToggle button.activeView {
+    background-color: #c30505c2;
+}
+
+/* Hover Effect */
+.viewToggle button:hover {
+    background-color: #ddd;
+}
+
+/* Posts Wrapper - Darker than Background */
+.postsWrapper {
+    background-color: #d9d9d9; /* Slightly darker than #f0f0f0 */
+    border: 1px solid rgba(75, 75, 75, 0.303);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Pagination Controls */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Number Buttons */
+.pageBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #727272;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Active Page */
+.pageBtn.active {
+    background-color: #c30505c2;
+}
+
+/* Hover Effect - Only for inactive numbers */
+.pageBtn:not(.active):hover {
+    background-color: #444444;
+}
+
+/* Arrow Buttons */
+.arrowBtn {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Keep Arrow Image Centered */
+.arrowBtn img {
+    width: 14px;
+    height: auto;
+}
+
+/* Hover Effect - Only for enabled arrows */
+.arrowBtn:not(:disabled):hover {
+    background-color: rgba(100, 100, 100, 0.428);
+}
+
+/* Disabled Buttons */
+.pageBtn:disabled,
+.arrowBtn:disabled {
+    background-color: rgba(100, 100, 100, 0.1);
+    cursor: default;
+    pointer-events: none;
+}
+
+/*------------------ Create Post Button (Fixed at Bottom) ------------------*/
+.createPostBtn {
+    margin-block: 30px;
+    width: 400px;
+    height: 50px;
+    background-color: #424242; /* ✅ Default dark background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* ✅ Hover Effect: Turns into the red */
+.createPostBtn:hover {
+    background-color: #c30505c2;
+}
+
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 900px) {
+    .filterBox {
+        flex-direction: column;
+        align-items: center; /* ✅ Center everything when wrapped */
+    }
+
+    .filterOptions {
+        width: 100%;
+        justify-content: center; /* ✅ Center the filters */
+    }
+
+    .filterItem {
+        flex-direction: column; /* Moves dropdown below text when needed */
+        align-items: center;
+    }
+
+    /* ✅ Center view toggle buttons when they go to the next line */
+    .viewToggle {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

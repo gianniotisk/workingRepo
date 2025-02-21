@@ -1,0 +1,19 @@
+/*------------------ Create Post Button (Fixed at Bottom) ------------------*/
+.createPostBtn {
+    margin-top: 50px;
+    width: 400px;
+    background-color: #24282b; /* ✅ Default dark background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* ✅ Hover Effect: Turns into the red */
+.createPostBtn:hover {
+    background-color: #c30505c2;
+}

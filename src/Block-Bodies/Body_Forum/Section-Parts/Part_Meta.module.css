@@ -1,0 +1,38 @@
+.frame {
+    display: flex; 
+    justify-content: space-between;  
+    align-items: end;        
+    font-size: 12px;
+    color: #888;
+    margin-top: auto;
+    /*border: 1px solid black*/
+    gap: 5px;      
+    flex-wrap: wrap; 
+}
+
+.infoLeft {
+    margin-top: 10px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 2px;  
+    /*border: 1px solid black*/
+}
+
+.infoRight {
+    height: 20px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /*border: 1px solid black*/
+}
+
+.comments {
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+    vertical-align: middle;
+}
