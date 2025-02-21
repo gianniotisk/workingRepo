@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Section_Featured.module.css";
 
-import FeaturedPosts from "../PostsData/FeaturedContentAlt"; 
+import PostData from "../../../AllPostsData/PostData"; 
 import Larrow from "../../../assets/General/Arrow-L.png";
 import Rarrow from "../../../assets/General/Arrow-R.png";
 import Unit_CardA from "../Section-Units/Unit_CardA"; 
@@ -9,7 +9,7 @@ import Unit_CardA from "../Section-Units/Unit_CardA";
 export default function Section_Featured() {
   const [index, setIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
-  const totalItems = FeaturedPosts.length;
+  const totalItems = PostData.length;
 
   // Adjust number of visible items dynamically
   React.useEffect(() => {
@@ -60,7 +60,7 @@ export default function Section_Featured() {
             className={styles.carouselTrack}
             style={{ transform: `translateX(-${index * (100 / itemsPerPage)}%)` }}
           >
-            {FeaturedPosts.map((post, idx) => (
+            {PostData.map((post, idx) => (
               <div key={idx} className={styles.carouselItem}>
                 <Unit_CardA {...post} />
               </div>

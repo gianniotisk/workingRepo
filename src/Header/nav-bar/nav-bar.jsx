@@ -37,15 +37,15 @@ export default function Nav_Bar({ toggleMenu }) {
           </li>
           <li className="dot">•</li>
           <li>
-            <a href="#">Featured</a>
+            <Link to="/Forum">Featured</Link>
           </li>
           <li className="dot">•</li>
           <li>
-            <a href="#">Trending</a>
+            <Link to="/Forum">Trending</Link>
           </li>
           <li className="dot">•</li>
           <li>
-            <a href="#">News</a>
+            <Link to="/Forum">News</Link>
           </li>
           <li className="dot">•</li>
           <li>

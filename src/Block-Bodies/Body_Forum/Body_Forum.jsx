@@ -4,8 +4,7 @@ import styles from "./Body_Forum.module.css";
 import Section_Featured from "./Sections/Section_Featured"; 
 import Section_Post from "./Sections/Section_Posts";
 
-import LatestPosts from "../Body_Home/PostsData/LatestContent";
-import CreatePost from "./Section-Units/Unit_Create";
+import PostData from "../../AllPostsData/PostData";
 
 export default function Body_Forum() {
   return (
@@ -16,7 +15,7 @@ export default function Body_Forum() {
       <Section_Post 
         title="Latest Posts" 
         moreLink="#" 
-        postsData={LatestPosts} 
+        postsData={PostData} 
         sectionId="popular-container"
       />
       
