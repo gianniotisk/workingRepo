@@ -11,7 +11,7 @@ const Movies = () => {
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [sortBy, setSortBy] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const moviesPerPage = 5;
+  const moviesPerPage = 14;
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [hoveredMovie, setHoveredMovie] = useState(null);
 
