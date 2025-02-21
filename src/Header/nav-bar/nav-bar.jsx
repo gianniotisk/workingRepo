@@ -23,7 +23,13 @@ export default function Nav_Bar({ toggleMenu }) {
         {/*--------------------------- Navigation Items ---------------*/}
         <ul className="nav-items">
           <li>
-            <a href="#">Movies & Series</a>
+            <Link
+              to={{
+                pathname: "/Movies",
+              }}
+            >
+              Movies & Series
+            </Link>
           </li>
           <li className="dot">•</li>
           <li>

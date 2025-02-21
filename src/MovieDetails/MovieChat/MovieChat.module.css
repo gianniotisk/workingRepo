@@ -1,0 +1,96 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+  
+.chat ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+  
+.chatHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+  
+.chatItem {
+    background-color: #D9D9D9;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+  
+.chatItem:not(:last-child) {
+    margin-bottom: 15px;
+}
+  
+.chatItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+  
+.pagination button:hover {
+    background-color: #ddd;
+}
+  
+.pagination button.active {
+    background-color: #333;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+.chatSubmit form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.chatSubmit input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.chatSubmit button {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}

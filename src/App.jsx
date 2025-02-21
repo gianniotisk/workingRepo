@@ -5,6 +5,11 @@ import About from "./Website-Pages/About"; // About Page Component
 import Bookmarks from "./Website-Pages/Page_Bookmark"; //Bookmarks Page Component
 import Forum from "./Website-Pages/Forum";
 import Post from "./Website-Pages/Post";
+import Login from "./Login/Login"; //Login Page Component
+import Movies from "./Website-Pages/Page_Movies"; //All Movies Page Component
+import MovieDetails from "./Website-Pages/Page_MovieDetails"; //Individual Movie Page Component
+import SearchResults from "./Website-Pages/Page_SearchResults"; //Search Results Page Component
+
 
 export default function App() {
   return (
@@ -15,6 +20,10 @@ export default function App() {
         <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/Forum" element={<Forum />} />
         <Route path="/Post" element={<Post />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movieDetails/:id" element={<MovieDetails />} />
+        <Route path="/searchResults" element={<SearchResults />} />
       </Routes>
     </Router>
   );
