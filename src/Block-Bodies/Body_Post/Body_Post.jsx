@@ -5,10 +5,8 @@ import Section_Head from "./Sections/Section_Head.jsx";
 import Section_Content from "./Sections/Section_Content.jsx";
 import Section_Comment from "./Sections/Section_Comment.jsx";
 
-import PostData from "../../AllPostsData/PostData.js";
-
-export default function Body_Post({ postIndex = 0 }) {
-    const post = PostData[postIndex] || PostData[0];
+export default function Body_Post({ post }) {  
+    if (!post) return <h1>Post not found</h1>; 
 
     return (
         <main className={styles.postPage}>
@@ -21,7 +19,7 @@ export default function Body_Post({ postIndex = 0 }) {
             />
 
             {/*------------------------------ Post Content ------------------------------*/}
-            <Section_Content content={post.content} relatedPosts={PostData.slice(0, 3)} />
+            <Section_Content content={post.content} relatedPosts={[]} />  
 
             {/*------------------------------ Comment Section ------------------------------*/}
             <Section_Comment commentsData={[]} />
@@ -29,3 +27,4 @@ export default function Body_Post({ postIndex = 0 }) {
         </main>
     );
 }
+

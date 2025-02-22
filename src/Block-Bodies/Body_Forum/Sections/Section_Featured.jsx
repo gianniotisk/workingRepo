@@ -9,9 +9,10 @@ import Unit_CardA from "../Section-Units/Unit_CardA";
 export default function Section_Featured() {
   const [index, setIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
-  const totalItems = PostData.length;
 
-  // Adjust number of visible items dynamically
+  const featuredPosts = PostData.filter(post => post.label === "Featured");
+  const totalItems = featuredPosts.length;
+
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
@@ -24,7 +25,7 @@ export default function Section_Featured() {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
+    handleResize(); 
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -33,7 +34,7 @@ export default function Section_Featured() {
     if (index < totalItems - itemsPerPage) {
       setIndex(index + 1);
     } else {
-      setIndex(0); // Loop back to start
+      setIndex(0); 
     }
   };
 
@@ -41,7 +42,7 @@ export default function Section_Featured() {
     if (index > 0) {
       setIndex(index - 1);
     } else {
-      setIndex(totalItems - itemsPerPage); // Loop back to end
+      setIndex(totalItems - itemsPerPage);
     }
   };
 
@@ -60,7 +61,7 @@ export default function Section_Featured() {
             className={styles.carouselTrack}
             style={{ transform: `translateX(-${index * (100 / itemsPerPage)}%)` }}
           >
-            {PostData.map((post, idx) => (
+            {featuredPosts.map((post, idx) => (
               <div key={idx} className={styles.carouselItem}>
                 <Unit_CardA {...post} />
               </div>

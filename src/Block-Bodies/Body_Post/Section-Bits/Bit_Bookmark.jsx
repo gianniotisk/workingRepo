@@ -3,10 +3,10 @@ import Bookadd from "../../../assets/Body/Section-Bits/Bookadd.png"
 
 export default function Bit_Bookmark() {
   const styles = {
-    position: "absolute",
-    top: "5px",
+    position: "relative",
+    top: "0px",
     right: "3px",
-    width: "30px",
+    width: "40px",
     height: "auto",
   }
 

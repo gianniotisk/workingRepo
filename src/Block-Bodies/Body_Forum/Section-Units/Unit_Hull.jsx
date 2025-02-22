@@ -5,7 +5,6 @@ import Unit_CardE from "./Unit_CardE.jsx";
 import styles from "./Unit_Hull.module.css";
 
 export default function Unit_Hull({ postsData, type }) {
-    // Determine which card component to use
     const SelectedComponent = type === "B" ? Unit_CardB : Unit_CardE;
 
     return (

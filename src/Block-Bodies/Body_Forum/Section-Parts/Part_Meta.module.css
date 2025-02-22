@@ -11,7 +11,6 @@
 }
 
 .infoLeft {
-    margin-top: 10px;
     min-width: 120px;
     display: flex;
     flex-direction: column;

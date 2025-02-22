@@ -8,8 +8,10 @@ export default function Unit_Linkage({ tags }) {
     <div className={styles.linkage}>
       
       {/*---------------- Bookmark Button ----------------*/}
-      Bookmark this Post:
-      <Bit_Bookmark />
+      <div className={styles.bookmarkContainer}>
+        <span>Bookmark this Post:</span>
+        <Bit_Bookmark />
+      </div>
 
       {/*---------------- Tags Section ----------------*/}
       <div className={styles.tags}>

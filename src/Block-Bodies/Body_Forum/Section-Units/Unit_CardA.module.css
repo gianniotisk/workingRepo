@@ -27,7 +27,6 @@
     object-fit: cover;
 }
 
-
 /* Content box at the bottom with a fade */
 .content {
     position: absolute;
@@ -40,13 +39,23 @@
     text-align: left;
 }
 
-/* Title Styling */
+/* Title Styling (Truncated to 2 Lines) */
 .title {
     margin-inline: 20px;
     font-size: 18px;
     line-height: 1.2;
     text-decoration: none;
     transition: text-decoration 0.3s ease, color 0.3s ease;
+
+    /* 🔥 Multi-line truncation */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;  /* 🔥 Limits text to 2 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: calc(1.2em * 2);  /* 🔥 Ensures it never grows beyond 2 lines */
+    white-space: normal;
+    word-break: break-word;
 }
 
 /* Underline on hover */
@@ -67,6 +76,8 @@
 
     .title {
         font-size: 16px;
+        -webkit-line-clamp: 2;
+        max-height: calc(1.2em * 2);
     }
 }
 
@@ -82,5 +93,16 @@
 
     .title {
         font-size: 14px;
+        -webkit-line-clamp: 2;
+        max-height: calc(1.2em * 2);
+    }
+}
+
+/* 🔥 Fallback for Firefox (which doesn't support -webkit-line-clamp) */
+@supports not (-webkit-line-clamp: 2) {
+    .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

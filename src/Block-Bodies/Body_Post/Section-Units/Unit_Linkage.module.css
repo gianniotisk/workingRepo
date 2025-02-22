@@ -7,7 +7,17 @@
     padding-left: 50px;
 }
 
-/* Tags - Start from image alignment */
+/* 🔹 Bookmark Container */
+.bookmarkContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 🔥 Adds spacing between text & button */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tags Section */
 .tags {
     display: flex;
     flex-direction: column;
@@ -52,9 +62,10 @@
     color: white;
 }
 
+/* 🔹 Responsive: Adjust for Small Screens */
 @media (max-width: 768px) {
     .linkage {
-        width: 20%; /* Adjusts for smaller screens */
+        width: 20%;
         padding-left: 0px;
     }
 
@@ -65,5 +76,9 @@
     .tag {
         font-size: 12px;
         padding: 4px 6px;
+    }
+
+    .bookmarkContainer {
+        font-size: 14px; /* 🔹 Adjust text size on mobile */
     }
 }

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Section_Posts.module.css";
 
+import PostData from "../../../AllPostsData/PostData";
 import arrL from "../../../assets/General/Arrow-L.png";
 import arrR from "../../../assets/General/Arrow-R.png";
 import gridIcon from "../../../assets/General/Grid-View.png";
@@ -9,57 +10,55 @@ import lineIcon from "../../../assets/General/Line-View.png";
 import Unit_Hull from "../Section-Units/Unit_Hull.jsx";
 import HeaderComponent from "../Section-Units/Unit_Head.jsx";
 
-export default function Section_Post({ title, postsData, sectionId }) {
+export default function Section_Post({ title, sectionId }) {
     const [filter, setFilter] = useState("All Posts");
     const [sort, setSort] = useState("Latest");
     const [category, setCategory] = useState("All");
-    const [viewMode, setViewMode] = useState("list"); // Default: List View
-    const [currentPage, setCurrentPage] = useState(1);
-    const postsPerPage = viewMode === "grid" ? 8 : 8; 
-    
-    // Filter posts by category
-    const filteredPosts = postsData.filter(post =>
-        (filter === "All Posts" || post.type === filter) &&
+
+    // 🔥 Load view mode & page number from localStorage
+    const [viewMode, setViewMode] = useState(() => {
+        return localStorage.getItem("viewMode") || "list";
+    });
+
+    const [currentPage, setCurrentPage] = useState(() => {
+        return Number(localStorage.getItem("currentPage")) || 1;
+    });
+
+    // 🔥 Save view mode & page number when they change
+    useEffect(() => {
+        localStorage.setItem("viewMode", viewMode);
+    }, [viewMode]);
+
+    useEffect(() => {
+        localStorage.setItem("currentPage", currentPage);
+    }, [currentPage]);
+
+    const postsPerPage = viewMode === "grid" ? 8 : 8;
+
+    //  Filter posts by selected label
+    const filteredPosts = PostData.filter(post => 
+        (filter === "All Posts" || post.label === filter) &&
         (category === "All" || post.category === category)
     );
 
-    // Sort posts
+    //  Sort posts based on the selected option
     const sortedPosts = [...filteredPosts].sort((a, b) => {
-        if (sort === "Latest") return new Date(b.date) - new Date(a.date);
-        if (sort === "Trending") return b.popularity - a.popularity;
+        if (sort === "Latest") return new Date(b.meta.date) - new Date(a.meta.date);
+        if (sort === "Trending") return b.meta.comments - a.meta.comments;
         return 0;
     });
 
-    // Pagination Logic
+    //  Pagination Logic
     const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
-    // Function to generate pagination numbers with truncation
-    const getPaginationNumbers = () => {
-        const maxVisible = 5;
-        let pages = [];
-
-        if (totalPages <= maxVisible) {
-            pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-        } else {
-            if (currentPage <= 3) {
-                pages = [1, 2, 3, "...", totalPages];
-            } else if (currentPage >= totalPages - 2) {
-                pages = [1, "...", totalPages - 2, totalPages - 1, totalPages];
-            } else {
-                pages = [1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages];
-            }
-        }
-        return pages;
-    };
-
     return (
         <section id={sectionId} className={styles.sectionPost}>
             <div className={styles.container}>
 
-                <HeaderComponent title="Community Forum Posts" />
+                <HeaderComponent title="Community Forum" />
 
                 {/*------------------------------ Filter & View Toggle Box -----------*/}
                 <div className={styles.filterBox}>
@@ -89,7 +88,7 @@ export default function Section_Post({ title, postsData, sectionId }) {
                             <label>Category:</label>
                             <select value={category} onChange={(e) => setCategory(e.target.value)}>
                                 <option value="All">All</option>
-                                <option value="Movies">Movies</option>
+                                <option value="Movie">Movie</option>
                                 <option value="Series">Series</option>
                                 <option value="Celebrities">Celebrities</option>
                                 <option value="Cast">Cast</option>
@@ -98,7 +97,6 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </div>
 
                     </div>
-
 
                     {/* View Toggle Buttons */}
                     <div className={styles.viewToggle}>
@@ -118,6 +116,7 @@ export default function Section_Post({ title, postsData, sectionId }) {
                     </div>
                 </div>
 
+                {/*------------------------------ Pagination Controls (TOP) --------*/} 
                 {totalPages > 1 && (
                     <div className={styles.pagination}>
                         {/* Prev Button */}
@@ -130,12 +129,12 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </button>
 
                         {/* Page Numbers */}
-                        {getPaginationNumbers().map((page, index) => (
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                             <button
-                                key={index}
-                                onClick={() => typeof page === "number" && setCurrentPage(page)}
+                                key={page}
+                                onClick={() => setCurrentPage(page)}
                                 className={`${styles.pageBtn} ${page === currentPage ? styles.active : ""}`}
-                                disabled={page === "..."}>
+                            >
                                 {page}
                             </button>
                         ))}
@@ -160,7 +159,7 @@ export default function Section_Post({ title, postsData, sectionId }) {
                     )}
                 </div>
 
-                {/*------------------------------ Pagination Controls --------*/}
+                {/*------------------------------ Pagination Controls (BOTTOM) --------*/} 
                 {totalPages > 1 && (
                     <div className={styles.pagination}>
                         {/* Prev Button */}
@@ -173,12 +172,12 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </button>
 
                         {/* Page Numbers */}
-                        {getPaginationNumbers().map((page, index) => (
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                             <button
-                                key={index}
-                                onClick={() => typeof page === "number" && setCurrentPage(page)}
+                                key={page}
+                                onClick={() => setCurrentPage(page)}
                                 className={`${styles.pageBtn} ${page === currentPage ? styles.active : ""}`}
-                                disabled={page === "..."}>
+                            >
                                 {page}
                             </button>
                         ))}
@@ -193,6 +192,8 @@ export default function Section_Post({ title, postsData, sectionId }) {
                         </button>
                     </div>
                 )}
+
+                {/* Create Post Button */}
                 <br/>
                 <button className={styles.createPostBtn}>
                     Create a Post

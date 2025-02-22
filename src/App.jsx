@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/bookmarks" element={<Bookmarks />} />
         <Route path="/Forum" element={<Forum />} />
-        <Route path="/Post" element={<Post />} />
+        <Route path="/post/:id" element={<Post />} />
         <Route path="/login" element={<Login />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/movieDetails/:id" element={<MovieDetails />} />

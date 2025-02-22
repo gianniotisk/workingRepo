@@ -4,7 +4,7 @@ import jokerPoster_2 from "../assets/Pictures/jokerPoster-2.png";
 import fordPoster from "../assets/Pictures/fordPoster.png";
 import fordPoster_2 from "../assets/Pictures/fordPoster_2.png";
 
-import nineteenPoster from "../assets/Pictures/nineteenPoster_2.png";
+import nineteenPoster from "../assets/Pictures/nineteenPoster.png";
 import nineteenPoster_2 from "../assets/Pictures/nineteenPoster_2.png";
 
 import knivesPoster from "../assets/Pictures/knivesPoster.png";
@@ -35,13 +35,39 @@ import zombielandPoster_2 from "../assets/Pictures/zombielandPoster_2.png";
 import frozenPoster from "../assets/Pictures/frozenPoster.png";
 import frozenPoster_2 from "../assets/Pictures/frozenPoster_2.png";
 
+import uncutPoster from "../assets/Pictures/uncutPoster.png";
+import uncutPoster_2 from "../assets/Pictures/uncutPoster_2.png";
+
+import jojoPoster from "../assets/Pictures/jojoPoster.png";
+import jojoPoster_2 from "../assets/Pictures/jojoPoster_2.png";
+
+import dolittlePoster from "../assets/Pictures/dolittlePoster.png";
+import dolittlePoster_2 from "../assets/Pictures/dolittlePoster_2.png";
+
+import terminatorPoster from "../assets/Pictures/terminatorPoster.png";
+import terminatorPoster_2 from "../assets/Pictures/terminatorPoster_2.png";
+
+import bombshellPoster from "../assets/Pictures/bombshellPoster.png";
+import bombshellPoster_2 from "../assets/Pictures/bombshellPoster_2.png";
+
+import contagionPoster from "../assets/Pictures/contagionPoster.png";
+import contagionPoster_2 from "../assets/Pictures/contagionPoster_2.png";
+
+import maleficentPoster from "../assets/Pictures/maleficentPoster.png";
+import maleficentPoster_2 from "../assets/Pictures/maleficentPoster_2.png";
+
+import starWarsPoster from "../assets/Pictures/starWarsPoster.png";
+import starWarsPoster_2 from "../assets/Pictures/starWarsPoster_2.png";
+
+
 
 const PostData = [
 
     // ============================================== FEATURED ARTICLES =====
     {
+        id: "1",
         label: "Featured",
-        title: "Joker: Why Joaquin Phoenix's Performance is Still Unmatched",
+        title: "Why Joaquin Phoenix's Performance as Joke is Still Unmatched",
         image: jokerPoster,
         description: "Years after its release, Joker remains one of the most celebrated performances in cinema history.",
         root: "Joker",
@@ -55,6 +81,7 @@ const PostData = [
         ]
     },
     {
+        id: "2",
         label: "Featured",
         title: "Ford v Ferrari: The Ultimate Racing Movie Experience",
         image: fordPoster,
@@ -70,8 +97,9 @@ const PostData = [
         ]
     },
     {
+        id: "3",
         label: "Featured",
-        title: "1917: The War Film That Redefined Cinema",
+        title: "The War Film That Redefined Cinema",
         image: nineteenPoster,
         description: "A breathtaking cinematic masterpiece that still holds up today.",
         root: "1917",
@@ -85,6 +113,7 @@ const PostData = [
         ]
     },
     {
+        id: "4",
         label: "Featured",
         title: "Knives Out: The Mystery Movie Everyone Should See",
         image: knivesPoster,
@@ -100,8 +129,9 @@ const PostData = [
         ]
     },
     {
+        id: "5",
         label: "Featured",
-        title: "The Lighthouse: A Psychological Horror Experience Like No Other",
+        title: "A Peculiar Psychological Horror Experience Like No Other. The Duo of Two Giants.",
         image: lighthousePoster,
         description: "A mind-bending masterpiece that will leave you questioning reality.",
         root: "The Lighthouse",
@@ -115,14 +145,15 @@ const PostData = [
         ]
     },
     {
+        id: "6",
         label: "Featured",
-        title: "Once Upon a Time in Hollywood: Tarantino’s Love Letter to the Film Industry",
+        title: "Once Upon a Time in Hollywood is Tarantino’s Love Letter to the Film Industry",
         image: onceUponPoster,
         description: "A nostalgic, stylish masterpiece from one of the greatest directors of all time.",
         root: "Once Upon a Time in Hollywood",
         category: "Movie",
         tags: ["Tarantino", "Hollywood", "DiCaprio"],
-        meta: { author: "Rachel Summers", date: "July 3, 2025", comments: 35 },
+        meta: { author: "Rachel Summers", date: "December 3, 2025", comments: 35 },
         content: [
             { type: "text", value: "Once Upon a Time in Hollywood is Quentin Tarantino’s tribute to the golden age of cinema, blending historical events with his signature style of revisionist storytelling. Set in 1969 Los Angeles, the film follows fading television actor Rick Dalton (Leonardo DiCaprio) and his loyal stunt double Cliff Booth (Brad Pitt) as they navigate a rapidly changing Hollywood landscape. The film captures the end of an era, filled with references to classic films, real-life actors, and the cultural shifts that defined the late 1960s. Through meticulous set design and an incredible soundtrack, Tarantino transports audiences to a time when Hollywood was both glamorous and unpredictable." },
             { type: "image", value: onceUponPoster_2, caption: "DiCaprio and Pitt deliver one of the best on-screen duos in recent memory." },
@@ -133,6 +164,7 @@ const PostData = [
     
     // ================================================================== NEWS ARTICLES =====
     {
+        id: "7",
         label: "News",
         title: "Fast & Furious 9: Filming Resumes After Unexpected Delays",
         image: fast9Poster,
@@ -140,7 +172,7 @@ const PostData = [
         root: "Fast & Furious 9",
         category: "Movie",
         tags: ["Fast9", "VinDiesel", "Action"],
-        meta: { author: "Jake Carter", date: "August 15, 2025", comments: 48 },
+        meta: { author: "Jake Carter", date: "April 24, 2025", comments: 48 },
         content: [
             { type: "text", value: "After months of unexpected delays, Fast & Furious 9 is officially back in production. The highly anticipated action film faced multiple setbacks due to a combination of scheduling conflicts, location restrictions, and unforeseen weather conditions. Vin Diesel recently took to social media to share behind-the-scenes photos of the cast and crew back on set, reassuring fans that the movie is still on track for its release. Fans speculated whether the delays would affect the film’s plot or push back the franchise’s overarching timeline, but Universal Studios has confirmed that all major story elements remain unchanged." },
             { type: "image", value: fast9Poster_2, caption: "The Fast saga continues with thrilling new action sequences." },
@@ -148,6 +180,7 @@ const PostData = [
         ]
     },
     {
+        id: "8",
         label: "News",
         title: "The Irishman 2? Scorsese Teases New Mafia Project",
         image: irishmanPoster,
@@ -155,7 +188,7 @@ const PostData = [
         root: "The Irishman",
         category: "Movie",
         tags: ["TheIrishman", "Scorsese", "Netflix"],
-        meta: { author: "David Morgan", date: "September 5, 2025", comments: 37 },
+        meta: { author: "David Morgan", date: "September 5, 2024", comments: 37 },
         content: [
             { type: "text", value: "Martin Scorsese has sparked excitement among film enthusiasts by teasing the possibility of another mafia-centered project, leading many to speculate whether this could be a spiritual successor to The Irishman. In a recent interview, Scorsese reflected on the process of making The Irishman, describing it as one of the most challenging yet rewarding films of his career. He mentioned that while he had no immediate plans for a direct sequel, he is fascinated by exploring different eras of organized crime and the shifting power dynamics within the mafia world." },
             { type: "image", value: irishmanPoster_2, caption: "Could De Niro and Pacino reunite once again?" },
@@ -163,6 +196,7 @@ const PostData = [
         ]
     },
     {
+        id: "9",
         label: "News",
         title: "Birds of Prey Director Opens Up About the Film’s Box Office Struggles",
         image: birdsPoster,
@@ -170,7 +204,7 @@ const PostData = [
         root: "Birds of Prey",
         category: "Movie",
         tags: ["BirdsOfPrey", "MargotRobbie", "DC"],
-        meta: { author: "Samantha Green", date: "October 22, 2025", comments: 31 },
+        meta: { author: "Samantha Green", date: "July 22, 2025", comments: 31 },
         content: [
             { type: "text", value: "Director Cathy Yan recently spoke candidly about the challenges Birds of Prey faced during its theatrical run. While the film was praised for its unique visual style, humor, and Margot Robbie’s performance as Harley Quinn, it underperformed at the box office compared to other DC properties. Yan believes that one of the primary reasons for this was the marketing strategy, which struggled to properly communicate the film’s tone and appeal to a wider audience." },
             { type: "image", value: birdsPoster_2, caption: "Harley Quinn’s wild ride still has a cult following." },
@@ -178,6 +212,7 @@ const PostData = [
         ]
     },
     {
+        id: "10",
         label: "News",
         title: "Doctor Sleep Director Reveals Scrapped Shining Cameos",
         image: sleepPoster,
@@ -185,7 +220,7 @@ const PostData = [
         root: "Doctor Sleep",
         category: "Movie",
         tags: ["DoctorSleep", "StephenKing", "Horror"],
-        meta: { author: "Nathan Carter", date: "November 10, 2025", comments: 29 },
+        meta: { author: "Nathan Carter", date: "November 28, 2024", comments: 29 },
         content: [
             { type: "text", value: "Director Mike Flanagan recently revealed that his adaptation of Doctor Sleep initially included more direct callbacks to The Shining, including planned cameos from key figures in the Overlook Hotel’s haunting past. While the film already featured recreations of iconic moments from Kubrick’s 1980 classic, there were early drafts where ghosts like Jack Nicholson’s Jack Torrance and Scatman Crothers’ Dick Hallorann had more substantial roles." },
             { type: "image", value: sleepPoster_2, caption: "Doctor Sleep was almost an even bigger homage to The Shining." },
@@ -193,6 +228,7 @@ const PostData = [
         ]
     },
     {
+        id: "11",
         label: "News",
         title: "Zombieland: Double Tap Writers Discuss the Future of the Franchise",
         image: zombielandPoster,
@@ -200,7 +236,7 @@ const PostData = [
         root: "Zombieland: Double Tap",
         category: "Movie",
         tags: ["Zombieland2", "Comedy", "Zombie"],
-        meta: { author: "Lauren Davis", date: "December 5, 2025", comments: 34 },
+        meta: { author: "Lauren Davis", date: "June 5, 2024", comments: 34 },
         content: [
             { type: "text", value: "Writers Rhett Reese and Paul Wernick have expressed interest in continuing the Zombieland franchise, but they say it all depends on fan demand and scheduling. The ten-year gap between the original Zombieland and Double Tap was partially due to getting the cast back together, and a third installment would likely face similar challenges. Despite this, the duo has hinted at potential story ideas that could take the characters in a fresh direction while maintaining the humor and action that made the first two films such a hit." },
             { type: "image", value: zombielandPoster_2, caption: "Could Tallahassee and crew return for another zombie adventure?" },
@@ -208,6 +244,7 @@ const PostData = [
         ]
     },
     {
+        id: "12",
         label: "News",
         title: "Frozen II: Unused Storylines That Would Have Changed the Film",
         image: frozenPoster,
@@ -215,137 +252,134 @@ const PostData = [
         root: "Frozen II",
         category: "Movie",
         tags: ["Frozen2", "Disney", "Animation"],
-        meta: { author: "Jessica Lane", date: "January 14, 2026", comments: 50 },
+        meta: { author: "Jessica Lane", date: "March 8, 2025", comments: 50 },
         content: [
             { type: "text", value: "New behind-the-scenes details reveal that early versions of Frozen II had drastically different plotlines, including one where Elsa was originally meant to have a love interest. While the final version of the film focused on Elsa’s personal journey and self-discovery, concept art and early scripts suggest that Disney had, at one point, planned for her to meet another character who would challenge her understanding of her powers and identity." },
             { type: "image", value: frozenPoster_2, caption: "What if Frozen II had taken a completely different path?" },
             { type: "text", value: "Other scrapped ideas included an alternate villain and a subplot where Anna gained magical abilities of her own. Storyboard artist Normand Lemay confirmed that multiple versions of the film were considered, but ultimately, they settled on focusing on Elsa’s connection to the mystical spirits and her family’s past. Fans continue to speculate about what could have been, and with Disney's recent announcement of a Frozen III in development, some of these unused concepts might still make their way into the next installment." }
         ]
     },
-    /*
     // ================================================================== NORMAL ARTICLES =====
     {
+        id: "13",
         label: null,
-        title: "Uncut Gems: How Adam Sandler Shocked the Film Industry",
-        image: uncutGems,
+        title: "How Adam Sandler Shocked the Film Industry, Breaking his Type-cast of Comedy",
+        image: uncutPoster,
         description: "Uncut Gems proved that Adam Sandler could deliver a career-defining dramatic performance.",
         root: "Uncut Gems",
         category: "Movie",
         tags: ["UncutGems", "AdamSandler", "Thriller"],
-        meta: { author: "Chris Porter", date: "January 25, 2026", comments: 41 },
+        meta: { author: "Chris Porter", date: "May 25, 2025", comments: 41 },
         content: [
             { type: "text", value: "Uncut Gems took audiences and critics by surprise, showcasing a completely different side of Adam Sandler. Known primarily for his comedy roles, Sandler delivered an electrifying performance as Howard Ratner, a desperate New York jeweler with a dangerous addiction to high-stakes gambling. Directed by the Safdie Brothers, the film is a relentless thriller that keeps viewers on edge from start to finish. The fast-paced dialogue, chaotic cinematography, and anxiety-inducing score create a stressful yet captivating experience that perfectly mirrors the protagonist’s deteriorating state of mind." },
-            { type: "image", value: uncutGems_2, caption: "Adam Sandler delivers the most intense performance of his career in Uncut Gems." },
-            { type: "text", value: "Despite early skepticism, Uncut Gems received widespread critical acclaim, with many calling it one of the best films of the decade. Sandler’s performance earned him several awards, though he was controversially snubbed at the Oscars. The film’s ambiguous ending left audiences divided, further cementing its reputation as a modern cult classic. For those who haven’t seen it, Uncut Gems is a must-watch, offering an exhilarating ride through the dark underbelly of New York’s diamond district." }
+            { type: "image", value: uncutPoster_2, caption: "Adam Sandler delivers the most intense performance of his career in Uncut Gems." }
         ]
     },
     {
+        id: "14",
         label: null,
-        title: "Jojo Rabbit: How Taika Waititi Balanced Comedy and Tragedy",
-        image: jojoRabbit,
+        title: "How Taika Waititi Balanced Comedy and Tragedy",
+        image: jojoPoster,
         description: "Jojo Rabbit is a one-of-a-kind film that blends satire with heartfelt storytelling.",
         root: "Jojo Rabbit",
         category: "Movie",
         tags: ["JojoRabbit", "TaikaWaititi", "Satire"],
-        meta: { author: "Sophia Ramirez", date: "February 10, 2026", comments: 29 },
+        meta: { author: "Sophia Ramirez", date: "February 25, 2025", comments: 29 },
         content: [
             { type: "text", value: "Taika Waititi’s Jojo Rabbit is a rare film that manages to be both hilarious and deeply emotional. Set during World War II, the story follows a young German boy, Jojo, who idolizes Hitler—only to have his worldview shattered when he discovers that his mother is hiding a Jewish girl in their home. The film uses satire to mock Nazi ideology, but at its core, it is a touching coming-of-age story about love, loss, and empathy. Waititi, who also plays a ridiculous, imaginary version of Hitler, brings his signature style of humor while never undermining the weight of the film’s serious themes." },
-            { type: "image", value: jojoRabbit_2, caption: "Taika Waititi blends humor with heart in Jojo Rabbit." },
-            { type: "text", value: "The film received widespread praise, winning the Oscar for Best Adapted Screenplay and earning Scarlett Johansson an Academy Award nomination for her role as Jojo’s mother. One of its greatest strengths is its ability to transition seamlessly between absurd comedy and heartbreaking drama, making it a truly unique cinematic experience. Whether you’re a fan of satire, historical films, or heartfelt storytelling, Jojo Rabbit is a must-watch that will make you laugh and cry in equal measure." }
+            { type: "image", value: jojoPoster_2, caption: "Taika Waititi blends humor with heart in Jojo Rabbit." }
         ]
     },
     {
+        id: "15",
         label: null,
-        title: "Dolittle: What Went Wrong With Robert Downey Jr.'s Passion Project?",
-        image: dolittle,
+        title: "What Went Wrong With Robert Downey Jr.'s Passion Project?",
+        image: dolittlePoster,
         description: "Dolittle was meant to be a magical adventure, but it fell flat for critics and audiences alike.",
         root: "Dolittle",
         category: "Movie",
         tags: ["Dolittle", "RobertDowneyJr", "Family"],
-        meta: { author: "Nathan Green", date: "March 3, 2026", comments: 18 },
+        meta: { author: "Nathan Green", date: "September 3, 2024", comments: 18 },
         content: [
             { type: "text", value: "When Robert Downey Jr. signed on to star in Dolittle, expectations were high. Coming off his legendary run as Iron Man, fans were eager to see him take on a different kind of role. However, what was supposed to be a charming, whimsical adventure turned into one of the biggest box office disappointments of the year. Critics and audiences alike found the film’s humor forced, its CGI animals unconvincing, and its plot unnecessarily convoluted. Downey’s bizarre accent, which was meant to be an eccentric touch, became a major distraction for viewers." },
-            { type: "image", value: dolittle_2, caption: "Robert Downey Jr. tried something new, but Dolittle struggled to find its audience." },
-            { type: "text", value: "Despite its flaws, Dolittle wasn’t without merit. The film featured an impressive cast, including Emma Thompson, Rami Malek, and Tom Holland, who voiced various animals. Additionally, younger audiences enjoyed its colorful visuals and adventure elements. While it may not have been the grand success many hoped for, Dolittle remains an interesting chapter in Robert Downey Jr.'s post-Marvel career, proving that even the biggest stars are not immune to missteps." }
+            { type: "image", value: dolittlePoster_2, caption: "Robert Downey Jr. tried something new, but Dolittle struggled to find its audience." }
         ]
     },
     {
+        id: "16",
         label: null,
         title: "Terminator: Dark Fate – Was This the Reboot Fans Wanted?",
-        image: terminatorDarkFate,
+        image: terminatorPoster,
         description: "The return of Linda Hamilton and James Cameron wasn’t enough to save Dark Fate at the box office.",
         root: "Terminator: Dark Fate",
         category: "Movie",
         tags: ["Terminator", "SciFi", "Action"],
-        meta: { author: "Lucas Carter", date: "April 1, 2026", comments: 32 },
+        meta: { author: "Lucas Carter", date: "April 1, 2025", comments: 32 },
         content: [
             { type: "text", value: "Terminator: Dark Fate was meant to revitalize the franchise, bringing back Linda Hamilton as Sarah Connor and involving James Cameron as a producer. The film ignored the events of previous sequels, acting as a direct follow-up to Terminator 2: Judgment Day. While it received positive reviews from critics and longtime fans praised its action sequences, Dark Fate struggled at the box office, failing to meet its high expectations. Many blamed franchise fatigue and a lack of compelling new characters for its underperformance." },
-            { type: "image", value: terminatorDarkFate_2, caption: "Terminator: Dark Fate attempted to restore the franchise’s former glory." },
-            { type: "text", value: "Despite its financial struggles, Dark Fate featured some of the best action scenes in the series, with a thrilling opening sequence and intense chase scenes reminiscent of the original films. Linda Hamilton’s return was a highlight, proving that Sarah Connor remains one of the most iconic female action heroes of all time. While the film’s ending left room for potential sequels, the disappointing box office results make the future of the franchise uncertain. For those who love action-packed sci-fi, Dark Fate is still worth a watch, even if it didn’t quite live up to the legacy of its predecessors." }
+            { type: "image", value: terminatorPoster_2, caption: "Terminator: Dark Fate attempted to restore the franchise’s former glory." }
         ]
     },
     {
+        id: "17",
         label: null,
-        title: "Bombshell: How the Film Exposed a Real-Life Scandal",
-        image: bombshell,
+        title: "A Film that Exposed a Real-Life Scandal in The Media World",
+        image: bombshellPoster,
         description: "A gripping look at the real-life controversy that shook the media industry.",
         root: "Bombshell",
         category: "Movie",
         tags: ["Bombshell", "Drama", "TrueStory"],
-        meta: { author: "Rachel Simmons", date: "May 12, 2026", comments: 45 },
+        meta: { author: "Rachel Simmons", date: "November 16, 2024", comments: 45 },
         content: [
             { type: "text", value: "Bombshell is a powerful dramatization of the real-life sexual harassment scandal that led to the downfall of Fox News CEO Roger Ailes. Featuring standout performances by Charlize Theron, Nicole Kidman, and Margot Robbie, the film provides a harrowing look at the toxic workplace culture that affected many women in the media industry. Bombshell doesn’t just tell the story—it brings viewers directly into the tension and fear that these women faced while working in an environment of silence and intimidation." },
-            { type: "image", value: bombshell_2, caption: "Charlize Theron’s transformation into Megyn Kelly was a highlight of Bombshell." },
-            { type: "text", value: "One of the film’s biggest achievements is its meticulous attention to detail, with Theron’s portrayal of Megyn Kelly being so eerily accurate that audiences often forgot they were watching an actor. The film also sparked discussions about the ongoing issue of workplace harassment and the impact of the #MeToo movement. While some critics felt that Bombshell could have delved even deeper into the scandal, it remains an important and timely film that sheds light on a difficult but necessary topic." }
+            { type: "image", value: bombshellPoster_2, caption: "Charlize Theron’s transformation into Megyn Kelly was a highlight of Bombshell." }
         ]
     },
     {
+        id: "18",
         label: null,
-        title: "Contagion: How This 2011 Film Predicted the Future",
-        image: contagion,
+        title: "How a 2011 Film Predicted the Future: Accurate Depiction of a World Pandemic",
+        image: contagionPoster,
         description: "Contagion became eerily relevant after the COVID-19 pandemic, proving how realistic its science was.",
         root: "Contagion",
         category: "Movie",
         tags: ["Contagion", "Thriller", "Pandemic"],
-        meta: { author: "Jason Reed", date: "June 20, 2026", comments: 61 },
+        meta: { author: "Jason Reed", date: "June 20, 2025", comments: 61 },
         content: [
             { type: "text", value: "When Contagion was released in 2011, it was regarded as an intense but somewhat hypothetical look at how a global pandemic could unfold. Fast forward to the COVID-19 pandemic, and the film suddenly became one of the most streamed and discussed movies of 2020. Directed by Steven Soderbergh, Contagion’s scarily accurate depiction of virus transmission, governmental response, and public panic made it feel less like fiction and more like a prophecy. Medical experts even praised the film for its realism, particularly in how it portrayed asymptomatic spread and misinformation." },
-            { type: "image", value: contagion_2, caption: "Contagion became one of the most streamed films during the 2020 pandemic." },
-            { type: "text", value: "Aside from its eerie accuracy, Contagion is a masterfully crafted thriller with an all-star cast, including Matt Damon, Kate Winslet, and Laurence Fishburne. The film builds tension through its procedural storytelling, showing how different individuals and organizations react to a fast-spreading virus. Unlike traditional disaster movies, Contagion doesn’t rely on exaggerated action or over-the-top heroics—it stays grounded, making its events even more terrifying. The film remains a must-watch, not just for its entertainment value but for its scientific credibility and foresight." }
+            { type: "image", value: contagionPoster_2, caption: "Contagion became one of the most streamed films during the 2020 pandemic." }
         ]
     },
     {
+        id: "19",
         label: null,
         title: "Maleficent: Mistress of Evil – A Darker Take on a Classic Tale",
-        image: maleficent2,
+        image: maleficentPoster,
         description: "Angelina Jolie returns as the misunderstood villain in this visually stunning sequel.",
         root: "Maleficent: Mistress of Evil",
         category: "Movie",
         tags: ["Maleficent", "Disney", "Fantasy"],
-        meta: { author: "Sophia Adams", date: "July 8, 2026", comments: 38 },
+        meta: { author: "Sophia Adams", date: "May 8, 2025", comments: 38 },
         content: [
             { type: "text", value: "Maleficent: Mistress of Evil continues Disney’s reimagining of one of its most iconic villains, further exploring the complexity of Maleficent’s character. Angelina Jolie once again delivers a commanding performance, bringing both intensity and vulnerability to the role. The sequel expands on the world introduced in the first film, introducing new magical creatures and a deeper look into Maleficent’s origins. Visually, the film is breathtaking, with stunning CGI landscapes and elaborate costume designs that add to its fairy-tale allure." },
-            { type: "image", value: maleficent2_2, caption: "Angelina Jolie’s return as Maleficent brings depth to the misunderstood villain." },
-            { type: "text", value: "Despite its strong performances and visuals, the film received mixed reviews from critics. Some praised its darker tone and emotional depth, while others felt the story was overly complicated. However, for fans of fantasy epics and those who enjoyed the first Maleficent film, this sequel offers a rich and immersive experience. At its core, Mistress of Evil is a story about love, loyalty, and breaking free from the roles others impose upon us—a fitting theme for a character who has always defied expectations." }
+            { type: "image", value: maleficentPoster_2, caption: "Angelina Jolie’s return as Maleficent brings depth to the misunderstood villain." }
         ]
     },
     {
+        id: "20",
         label: null,
-        title: "Star Wars: The Rise of Skywalker – A Divisive Finale",
-        image: starWars9,
+        title: "The Rise of Skywalker – A Divisive Finale in The World of George Lucas",
+        image: starWarsPoster,
         description: "The final chapter of the Skywalker saga left fans split between love and disappointment.",
         root: "Star Wars: Episode IX - The Rise of Skywalker",
         category: "Movie",
         tags: ["StarWars", "SciFi", "Disney"],
-        meta: { author: "Ethan Collins", date: "August 15, 2026", comments: 72 },
+        meta: { author: "Ethan Collins", date: "March 15, 2025", comments: 72 },
         content: [
             { type: "text", value: "Star Wars: The Rise of Skywalker marked the end of the beloved Skywalker saga, bringing an emotional yet controversial conclusion to the decades-spanning franchise. Directed by J.J. Abrams, the film attempted to wrap up the stories of Rey, Kylo Ren, and the Resistance while also revisiting legacy characters and past plotlines. Despite its box office success, the film was met with mixed reactions, with some praising its nostalgic moments and others criticizing its rushed pacing and lack of cohesion." },
-            { type: "image", value: starWars9_2, caption: "The Rise of Skywalker brought a divisive ending to the Star Wars saga." },
-            { type: "text", value: "One of the film’s biggest surprises was the return of Emperor Palpatine, a twist that left many fans debating whether it was a brilliant move or an unnecessary retcon. The film also explored Rey’s true lineage, a revelation that further divided audiences. While some appreciated the action-packed finale and emotional character arcs, others felt that The Rise of Skywalker played it too safe, trying to appease all sides of the fandom rather than taking bold creative risks. Regardless of where one stands, it remains a significant moment in film history and a must-watch for any Star Wars fan." }
+            { type: "image", value: starWarsPoster_2, caption: "The Rise of Skywalker brought a divisive ending to the Star Wars saga." }
         ]
-    },
-    */
+    },    
 ];
 
 export default PostData;
-
