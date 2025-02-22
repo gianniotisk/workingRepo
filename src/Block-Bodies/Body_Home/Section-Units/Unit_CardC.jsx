@@ -4,6 +4,9 @@ import styles from "./Unit_CardC.module.css";
 import playIcon from "../../../assets/Body/play.png";
 import starEmpty from "../../../assets/Body/star-e.png";
 import starFull from "../../../assets/Body/star-f.png";
+import plusIcon from "../../../assets/Body/plusIcon.png";
+import minusIcon from "../../../assets/Body/minusIcon.png";
+
 
 export default function Unit_CardC({ title, image, rating }) {
   const post = { title, image, rating }; // A post so it can be stored for bookmarking
@@ -60,8 +63,16 @@ export default function Unit_CardC({ title, image, rating }) {
 
         {/* Buttons */}
         <div className={styles.cardButtons}>
-          <button className={styles.watchlistBtn} onClick={handleBookmarkMovie}>
-            {bookadded ? "Remove from Watchlist" : "Add to Watchlist"}
+          <button
+            className={`${styles.watchlistBtn} ${bookadded ? styles.removeFromWatchlist : ""}`}
+            onClick={handleBookmarkMovie}
+          >
+            <img
+              src={bookadded ? minusIcon : plusIcon}
+              alt={bookadded ? "Remove from Watchlist" : "Add to Watchlist"}
+              className={styles.watchlistBtnImage}
+            />
+            {bookadded ? " From Watchlist" : " To Watchlist"}
           </button>
           <button className={styles.trailerBtn}>
             <img src={playIcon} alt="Play Icon" className={styles.playIcon} />
