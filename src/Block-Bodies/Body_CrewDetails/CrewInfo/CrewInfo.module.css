@@ -24,6 +24,19 @@
     margin-bottom: 10px;
 }
 
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+  
+.role {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .crewDetails {
         flex-direction: column;

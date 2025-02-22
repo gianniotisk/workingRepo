@@ -9,11 +9,14 @@ export default function CrewInfo({ name, role, imageUrl }) {
     <section className={styles.crewDetails}>
       <img src={imageUrl} alt={`${name} photo`} className={styles.crewPoster} />
       <section className={styles.crewInfo}>
-        <header className={styles.title}>{name}</header>
-        <p><em>Role:</em> {role}</p>
+        <header className={styles.titleSection}>
+          <h2 className={styles.title}>{name}</h2>
+          <p className={styles.role}>Role: {role}</p>
+        </header>
       </section>
       <hr />
     </section>
+
   );
 }
 

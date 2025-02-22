@@ -15,7 +15,7 @@ export default function CrewFilmography({ movies }) {
             <span key={movie.id} className={styles.crewMoviesItems}>
               <Link to={`/movieDetails/${movie.id}`}>
                 <img src={movie.imageUrl} alt={`${movie.title} poster`} />
-                <p>{movie.title}</p>
+                <p className={styles.movieTitle}>{movie.title}</p>
               </Link>
             </span>
           ))

@@ -15,7 +15,7 @@
     text-align: center;
 }
   
-.crewMoviesItems a img {
+.crewMoviesItems img {
     width: 100%;
     height: auto;
     max-width: 150px;
@@ -28,6 +28,11 @@
     font-size: 1rem;
     margin: 0;
     text-align: center;
+    
+}
+
+.movieTitle{
+    text-decoration: none;
 }
   
 .filmography{
@@ -38,10 +43,6 @@
 }
 
 @media (max-width: 768px) {
-    
-  
-    
-  
     .crewMovies {
         grid-template-columns: 1fr;
         padding: 10px;
