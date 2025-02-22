@@ -7,6 +7,8 @@ import Bit_Label from "../Section-Bits/Bit_Label";
 import Bit_Bookmark from "../Section-Bits/Bit_Bookmark";
 
 export default function Unit_CardE({ id, title, image, description, meta, label, root }) {
+  const post = { title, image, meta, label }; // A post so it can be stored for bookmarking
+
   return (
     <Link to={`/post/${id}`} className={styles.cardLink}>
       <div className={styles.card}>
@@ -19,7 +21,7 @@ export default function Unit_CardE({ id, title, image, description, meta, label,
           {label && <Bit_Label label={label} />}
 
           {/* 🔹 Bookmark Icon (Top Right) */}
-          <Bit_Bookmark className={styles.bookmark}/>
+          <Bit_Bookmark className={styles.bookmark} post={post}/>
 
           {/* 🔹 Root Box (Movie Name) - Bottom Center */}
           <div className={styles.rootBox}>
