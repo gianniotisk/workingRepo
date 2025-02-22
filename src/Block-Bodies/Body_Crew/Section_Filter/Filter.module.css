@@ -1,0 +1,16 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    section {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

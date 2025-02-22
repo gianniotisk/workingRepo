@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 import "./FooterLogoLinks.css"
 import ICON from "../../assets/Footer/Logo-icon.png";
@@ -17,19 +19,34 @@ export default function FooterLogoLinks() {
             <div className="footer-about">
                 <ul>
                     <li>
-                        <a href="#">Our Community</a>
+                    <Link
+                        to={{
+                            pathname: "/Newsletter",
+                        }}
+                    >
+                        Newsletter
+                    </Link>
+                        
                     </li>
                     <li className="line">|</li>
                     <li>
-                        <a href="#">Join Our Team</a>
+                    <Link
+                        to={{
+                            pathname: "/AboutUs",
+                        }}
+                    >
+                        About Us
+                    </Link>
                     </li>
                     <li className="line">|</li>
                     <li>
-                        <a href="#">About Us</a>
-                    </li>
-                    <li className="line">|</li>
-                    <li>
-                        <a href="#">Contact Us</a>
+                    <Link
+                        to={{
+                            pathname: "/ContactUs",
+                        }}
+                    >
+                        Contact Us
+                    </Link>
                     </li>
                 </ul>
             </div>

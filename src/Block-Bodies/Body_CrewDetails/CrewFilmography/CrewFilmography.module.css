@@ -1,0 +1,50 @@
+.crewMovies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.crewMoviesItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+  
+.crewMoviesItems img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+  
+.crewMoviesItems p {
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    
+}
+
+.movieTitle{
+    text-decoration: none;
+}
+  
+.filmography{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .crewMovies {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}

@@ -92,7 +92,15 @@
 }
 
 .watchlistBtn:hover {
-    background-color: #1a73e8;
+    background-color: #f44336;
+}
+
+.watchlistBtnImage {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+   
 }
 
 .trailerBtn {
@@ -109,6 +117,10 @@
 .playIcon {
     width: 14px;
     height: 14px;
+}
+
+.removeFromWatchlist { 
+    background-color: red; 
 }
 
 /* Responsive Updates */

@@ -1,0 +1,23 @@
+.sortFilteringButtons {
+    text-align: center;
+    padding: 5px;
+}
+  
+.sortFilteringButtons select {
+    background-color: #9E9E9E;
+    margin: 5px;
+}
+  
+select {
+    padding: 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #9E9E9E;
+    border-radius: 4px;
+    max-width: 100%;
+}
+  
+select:disabled {
+    color: gray;
+}
+  

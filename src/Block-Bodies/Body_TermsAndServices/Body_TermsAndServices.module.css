@@ -1,0 +1,14 @@
+.align{
+    text-align: center;
+}
+
+.paragraph{
+   padding: 5px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+}
