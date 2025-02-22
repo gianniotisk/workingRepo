@@ -14,7 +14,7 @@ export default function Body_CrewDetails() {
 
   useEffect(() => {
     if (name) {
-      // Fetch crew data
+      // Fetch crew from the database
       fetch(`https://city-assignment.firebaseio.com/people.json`)
         .then((res) => res.json())
         .then((data) => {
