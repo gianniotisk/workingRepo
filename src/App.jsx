@@ -11,6 +11,13 @@ import MovieDetails from "./Website-Pages/Page_MovieDetails"; //Individual Movie
 import SearchResults from "./Website-Pages/Page_SearchResults"; //Search Results Page Component
 import Crew from "./Website-Pages/Crew"; //Crew Page Component
 import CrewDetails from "./Website-Pages/CrewDetails"; //Individual Crew Page Component
+import AboutUs from "./Website-Pages/AboutUs";
+import ContactUs from "./Website-Pages/ContactUs";
+import Newsletter from "./Website-Pages/Newsletter";
+import Privacy from "./Website-Pages/Privacy";
+import TermsAndServices from "./Website-Pages/TermsAndServices";
+import WebsitePolicy from "./Website-Pages/WebsitePolicy";
+
 
 
 
@@ -29,6 +36,12 @@ export default function App() {
         <Route path="/searchResults" element={<SearchResults />} />
         <Route path="/crew" element={<Crew />} />
         <Route path="/crewDetails/:name" element={<CrewDetails />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/Newsletter" element={<Newsletter />} />
+        <Route path="/Privacy" element={<Privacy />} />
+        <Route path="/TermsAndServices" element={<TermsAndServices />} />
+        <Route path="/WebsitePolicy" element={<WebsitePolicy />} />
       </Routes>
     </Router>
   );

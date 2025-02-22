@@ -82,7 +82,7 @@ export default function SearchResults() {
                   </Link>
                 ) : (
                   <Link
-                    to={`/crew-details/${item.name}`}
+                    to={`/crewDetails/${item.name}`}
                     className={styles.resultItem}
                   >
                     <img

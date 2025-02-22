@@ -1,0 +1,21 @@
+.title{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.subTitle{
+    text-align: center;
+}
+
+.policyList{
+    text-align: center;
+    list-style: none;
+    margin: 20px;
+}
+
+.policyList li{
+    
+    padding: 10px;
+}

@@ -1,0 +1,53 @@
+.subTitle{
+    text-align: center;
+}
+  
+.newsletter{
+  text-align: center;
+    border: 1px solid #000;
+    margin: 10px auto;
+    width: 50%;
+    max-width: 600px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 5px;
+    text-align: center;
+}
+  
+.fincher p,
+.purpose p{
+    text-align: center;
+}
+  
+.newsletterButton{
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #9E9E9E;
+    cursor: pointer;
+    border: none;
+    margin: 15px;
+}
+
+.newsletter a{
+    text-decoration: none;
+}
+  
+.finchImage{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+@media (max-width: 768px){
+    .finchImage {
+      width: 70%;
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+}
