@@ -36,7 +36,7 @@ const MovieDetails = () => {
           };
           setMovie(movieObject);
 
-          
+          // Check if the movie is already bookmarked
           const savedMovies =
             JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
           setBookadded(savedMovies.some((item) => item.id === id));
@@ -84,6 +84,8 @@ const MovieDetails = () => {
     localStorage.setItem("bookmarkedMovies", JSON.stringify(savedMovies));
     setBookadded(!bookadded);
   };
+
+  if (!movie) return <p>Loading...</p>;
 
   return (
     <div className={styles.WholeBody}>
