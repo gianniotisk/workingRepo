@@ -22,7 +22,7 @@ const Body_Newsletter = () => {
   const newsletterSubmit = (e) => {
     e.preventDefault();
     console.log("Newsletter Data:", newsletter);
-    alert("Newsletter request submitted successfully!");
+    alert("Newsletter request submitted successfully!"); //It just says submitted succesfully, but nothing happens, no email provider
     setNewsletter({ lastName: "", firstName: "", email: "", optionalText: "", agreement: false });
   };
 
