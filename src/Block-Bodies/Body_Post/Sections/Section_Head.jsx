@@ -13,7 +13,7 @@ export default function Section_Head({ title, image, meta = {}, tags }) {
         <Unit_Banner title={title} image={image} meta={meta} />
 
         {/*---------------- Right: Bookmark & Tags ----------------*/}
-        <Unit_Linkage tags={tags} />
+        <Unit_Linkage title={title} image={image} meta={meta} tags={tags} />
 
       </div>
     </div>
