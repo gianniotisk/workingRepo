@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-import "./Page_Login.css";
+import "./Pages.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Login from "../Login/Login";
+import Body from "../Block-Bodies/Body_Bookmarks/Body_Bookmarks";
 
-export default function App() {
+export default function Bookmark() {
   return (
-    <div className="">
+    <div className="Web-frame">
       <Header />
-      <Login />
+      <Body />
       <Footer />
     </div>
   );

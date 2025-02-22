@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./Bookmarks.module.css";
+import styles from "./Body_Bookmarks.module.css";
 
 import Posts from "./Posts/PostBookmarks";
 import Movies from "./Movies/MovieBookmarks";

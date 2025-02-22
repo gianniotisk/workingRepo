@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import styles from "./MovieDetails.module.css";
 import MovieChat from "./MovieChat/MovieChat";
 
-import EMPTYSTAR from "../assets/Body/star-e.png";
-import FILLEDSTAR from "../assets/Body/star-f.png";
+import EMPTYSTAR from "../../assets/Body/star-e.png";
+import FILLEDSTAR from "../../assets/Body/star-f.png";
 
 const MovieDetails = () => {
   const { id } = useParams();

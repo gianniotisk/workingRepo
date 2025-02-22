@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Movies.module.css";
 import { Link } from "react-router-dom";
 
-import STAR from "../assets/Body/star-f.png";
+import STAR from "../../assets/Body/star-f.png";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);

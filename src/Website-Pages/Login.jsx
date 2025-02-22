@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-import "./Page_Movies.css";
+import "./Pages.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Movies from "../Movies/Movies";
+import Body from "../Login/Login";
 
-export default function App() {
+export default function Login() {
   return (
-    <div className="Web-frame">
+    <div className="">
       <Header />
-      <Movies />
+      <Body />
       <Footer />
     </div>
   );

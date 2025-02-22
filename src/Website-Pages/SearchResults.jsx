@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-import "./Page_MovieDetails.css";
+import "./Pages.css";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import MovieDetails from "../MovieDetails/MovieDetails";
+import Body from "../Block-Bodies/Body_SearchResults/SearchResults";
 
-export default function App() {
+export default function SearchResults() {
   return (
     <div className="Web-frame">
       <Header />
-      <MovieDetails />
+      <Body />
       <Footer />
     </div>
   );
