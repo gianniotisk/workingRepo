@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import styles from "./MovieDetails.module.css";
@@ -11,6 +11,7 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [reviews, setReviews] = useState([]);
+  const [crewWithPages, setCrewWithPages] = useState(new Set());
   const [bookadded, setBookadded] = useState(false);
 
   useEffect(() => {
@@ -25,11 +26,9 @@ const MovieDetails = () => {
           const movieObject = {
             id,
             title: movieData.title,
-            image: movieData.imageUrl, // This saves images for UnitCard_C in the homepage
-            imageUrl: movieData.imageUrl, //This saves images from Movies in the MovieDetails
+            imageUrl: movieData.imageUrl,
             year: movieData.releaseYear,
             userScore: movieData.score,
-            rating: movieData.score,
             description: movieData.summary,
             director: movieData.director,
             cast: movieData.cast || [],
@@ -37,13 +36,22 @@ const MovieDetails = () => {
           };
           setMovie(movieObject);
 
-          // Check if the movie is already bookmarked
+          
           const savedMovies =
             JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
           setBookadded(savedMovies.some((item) => item.id === id));
         }
       });
   }, [id]);
+
+  useEffect(() => {
+    fetch(`https://city-assignment.firebaseio.com/people.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        const crewNames = new Set(Object.values(data || {}).map((member) => member.name));
+        setCrewWithPages(crewNames);
+      });
+  }, []);
 
   useEffect(() => {
     fetch(
@@ -58,23 +66,6 @@ const MovieDetails = () => {
         setReviews(reviewList);
       });
   }, [id]);
-
-  const addReview = (newReview) => {
-    fetch(`https://city-assignment.firebaseio.com/reviews.json`, {
-      method: "POST",
-      body: JSON.stringify({
-        ...newReview,
-        movieId: id,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then(() => {
-        setReviews((prevReviews) => [...prevReviews, newReview]);
-      });
-  };
 
   const handleBookmarkMovie = () => {
     let savedMovies =
@@ -93,8 +84,6 @@ const MovieDetails = () => {
     localStorage.setItem("bookmarkedMovies", JSON.stringify(savedMovies));
     setBookadded(!bookadded);
   };
-
-  if (!movie) return <p>Loading...</p>;
 
   return (
     <div className={styles.WholeBody}>
@@ -123,7 +112,14 @@ const MovieDetails = () => {
               <strong>Year:</strong> {movie.year || "Not available"}
             </p>
             <p>
-              <strong>Director:</strong> {movie.director || "Not available"}
+              <strong>Director:</strong>{" "}
+              {crewWithPages.has(movie.director) ? (
+                <Link to={`/crewDetails/${movie.director}`}>
+                  {movie.director}
+                </Link>
+              ) : (
+                movie.director || "Not available"
+              )}
             </p>
             <p>
               <strong>User Score:</strong> {movie.userScore}
@@ -150,12 +146,19 @@ const MovieDetails = () => {
       <header className={styles.title}>Cast</header>
       <ul className={styles.genreAndCastList}>
         {movie.cast.map((actor, index) => (
-          <li key={index}>{actor}</li>
+          <li key={index}>
+            {crewWithPages.has(actor) ? (
+              <Link to={`/crewDetails/${actor}`}>{actor}</Link>
+            ) : (
+              actor
+            )}
+          </li>
         ))}
       </ul>
+
       <hr />
 
-      <MovieChat reviews={reviews} addReview={addReview} />
+      <MovieChat reviews={reviews} movieId={id} setReviews={setReviews} />
     </div>
   );
 };
