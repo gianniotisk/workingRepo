@@ -53,7 +53,7 @@ export default function MovieBookmarks() {
                   <h4>{movie.title}</h4>
                   <p>Rating: {movie.rating}</p>
                 </div>
-                {/* Remove Button */}
+                {/* Remove Button, the star */}
                 <img
                   src={STAR}
                   alt="Remove Bookmark"
