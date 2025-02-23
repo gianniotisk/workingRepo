@@ -69,10 +69,10 @@ export default function Unit_CardC({ title, image, rating }) {
           >
             <img
               src={bookadded ? minusIcon : plusIcon}
-              alt={bookadded ? "Remove from Watchlist" : "Add to Watchlist"}
+              alt={bookadded ? "Remove Watchlist" : "Add Watchlist"}
               className={styles.watchlistBtnImage}
             />
-            {bookadded ? " From Watchlist" : " To Watchlist"}
+            {bookadded ? "Remove Watchlist" : "Add Watchlist"}
           </button>
           <button className={styles.trailerBtn}>
             <img src={playIcon} alt="Play Icon" className={styles.playIcon} />

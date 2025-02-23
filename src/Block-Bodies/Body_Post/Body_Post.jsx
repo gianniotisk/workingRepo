@@ -20,14 +20,11 @@ export default function Body_Post({ post }) {
                 movieTitle={post.movieTitle}
             />
             
-
             {/*------------------------------ Post Content ------------------------------*/}
             <Section_Content content={post.content} relatedPosts={[]} />  
 
             {/*------------------------------ Comment Section ------------------------------*/}
             <Section_Comment commentsData={[]} />
-
-            
 
         </main>
     );

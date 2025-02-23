@@ -1,26 +1,33 @@
+/* Ensure Link (`.cardLink`) does not break layout */
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Card container */
 .card {
     background-color: #ffffff;
     border-radius: 5px;
     display: flex;
-    flex-direction: row; /* Display image and content side by side */
-    align-items: stretch; /* Stretch to equal height */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    flex-direction: row;
+    align-items: stretch;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 10px;
 }
 
 /* Display (Left Side) */
 .display {
-    background-color: #d9d9d9; /* Gray background */
+    background-color: #d9d9d9;
     border-radius: 5px;
     width: 250px;
     height: 180px;
-    width: fixed;
     position: relative;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Push items to top and bottom */
+    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -30,13 +37,53 @@
     object-fit: cover;
 }
 
+/* 🔹 Label (News, Featured) - Top Left */
+.display .bitLabel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* 🔹 Bookmark Icon (Top Right) */
+.bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* 🔹 Root Box (Small, Transparent, Centered, and Truncated if Too Long) */
+.rootBox {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Content (Right Side) */
 .content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%; /* Take up 60% of the card width */
+    width: 60%;
     padding: 5px;
     padding-left: 15px;
     overflow: hidden;
@@ -50,29 +97,27 @@
     display: -webkit-box;             
     -webkit-box-orient: vertical;     
     -webkit-line-clamp: 3;
-    line-clamp: 3;             
     overflow: hidden;                
     text-overflow: ellipsis;          
     line-height: 1.4em;               
     max-height: calc(1.4em * 3);
 }
+
 .content p {
-    font-size: 14px;         /* Slightly smaller than the title */
-    color: #666;             /* Grayish text color */
+    font-size: 14px;
+    color: #666;
     text-align: justify;
-    margin-top: 5px;         /* Space between title and description */
+    margin-top: 5px;
     
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;   /* Show up to 3 lines */
-    line-clamp: 3; 
+    -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 1.4em;      /* Consistent line spacing */
+    line-height: 1.4em;
     max-height: calc(1.4em * 3);
     padding-right: 5px;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -87,20 +132,23 @@
 
     .content h4 {
         -webkit-line-clamp: 2;
-        line-clamp: 2;
         max-height: calc(1.4em * 2);
+    }
+
+    .rootBox {
+        font-size: 12px;
+        padding: 3px 8px;
     }
 }
 
 @media (min-width: 769px) {
     .content h4 {
-        -webkit-line-clamp: 4;
-        line-clamp: 4;
-        max-height: calc(1.4em * 4);
+        -webkit-line-clamp: 3;
+        max-height: calc(1.4em * 3);
     }
+
     .content p {
-        -webkit-line-clamp: 3; /* Show 3 lines on larger screens */
-        line-clamp: 3;
+        -webkit-line-clamp: 3;
         max-height: calc(1.4em * 3);
     }
 }

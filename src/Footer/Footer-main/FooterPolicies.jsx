@@ -24,7 +24,7 @@ export default function FooterLinks() {
                             pathname: "/TermsAndServices",
                         }}
                     >
-                        Terms And Services
+                        Terms & Services
                     </Link>
                 </li>
                 <li className="dot">•</li>

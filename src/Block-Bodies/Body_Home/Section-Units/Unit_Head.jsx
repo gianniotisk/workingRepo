@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Unit_Head.module.css"
 
 import Marker1 from "../../../assets/General/Mark-rect.png"
@@ -19,9 +20,9 @@ export default function Header_component ({ title, moreLink}){
             </div>
             {/*---------------------------- Section More -------*/}
             <div className={styles.more}>
-                <a href={moreLink} className={styles.link}>
+                <Link to="/Forum" className={styles.link}>
                     MORE
-                </a>
+                </Link>
                 <img 
                     src={Marker2} 
                     alt="Pointer" 

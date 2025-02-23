@@ -9,7 +9,7 @@
 }
 
 /* Image covers the entire card */
-.image {
+.billboard {
     width: 100%;
     height: 100%;
     object-fit: cover;

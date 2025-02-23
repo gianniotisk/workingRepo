@@ -1,7 +1,7 @@
 /*--------------------------- Footer Main-Section -------------------*/
 .footer-main {
-    background-color: #101010; /* Black background */
-    padding: 20px 0; /* Restore balanced padding */
+    background-color: #101010; 
+    padding: 10px 0; 
     width: 100%;
     box-sizing: border-box;
 }

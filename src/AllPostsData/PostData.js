@@ -1,21 +1,26 @@
 import jokerPoster from "../assets/Pictures/jokerPoster.png";
 import jokerPoster_2 from "../assets/Pictures/jokerPoster-2.png";
+import jokerBoard from "../assets/Pictures/jokerBoard.png";
 
 import fordPoster from "../assets/Pictures/fordPoster.png";
 import fordPoster_2 from "../assets/Pictures/fordPoster_2.png";
+import fordBoard from "../assets/Pictures/fordBoard.png";
 
 import nineteenPoster from "../assets/Pictures/nineteenPoster.png";
 import nineteenPoster_2 from "../assets/Pictures/nineteenPoster_2.png";
+import nineteenBoard from "../assets/Pictures/nineteenBoard.png";
 
 import knivesPoster from "../assets/Pictures/knivesPoster.png";
 import knivesPoster_2 from "../assets/Pictures/knivesPoster_2.png";
+import knivesBoard from "../assets/Pictures/knivesBoard.png";
 
 import lighthousePoster from "../assets/Pictures/lighthousePoster.png";
 import lighthousePoster_2 from "../assets/Pictures/lighthousePoster_2.png";
-
+import lighthouseBoard from "../assets/Pictures/lighthouseBoard.png";
 
 import onceUponPoster from "../assets/Pictures/onceUponPoster.png";
 import onceUponPoster_2 from "../assets/Pictures/onceUponPoster_2.png";
+import onceUponBoard from "../assets/Pictures/onceUponBoard.png";
 
 import fast9Poster from "../assets/Pictures/fast9Poster.png";
 import fast9Poster_2 from "../assets/Pictures/fast9Poster_2.png";
@@ -69,12 +74,13 @@ const PostData = [
         label: "Featured",
         title: "Why Joaquin Phoenix's Performance as Joker is Still Unmatched",
         image: jokerPoster,
+        billboard: jokerBoard,
         description: "Years after its release, Joker remains one of the most celebrated performances in cinema history.",
         root: "Joker",
         movieTitle:"Joker",
         category: "Movie",
         tags: ["Joker", "JoaquinPhoenix", "DC"],
-        meta: { author: "John Doe", date: "February 10, 2025", comments: 58 },
+        meta: { author: "Finch", date: "February 10, 2025", comments: 58 },
         content: [
             { type: "text", value: "Since its release, Joker has cemented itself as a cultural phenomenon. Joaquin Phoenix’s haunting performance was more than just acting—it was a full-body transformation that captivated audiences worldwide. The film redefined what a comic book-inspired movie could be, taking a dark psychological approach rather than a traditional superhero narrative. Phoenix’s dedication to the role included extreme weight loss, method acting, and hours of studying mental illness to create a version of Arthur Fleck that felt heartbreakingly real." },
             { type: "image", value: jokerPoster_2, caption: "Joaquin Phoenix on set, preparing for one of Joker’s most chilling scenes." },
@@ -86,12 +92,13 @@ const PostData = [
         label: "Featured",
         title: "Ford v Ferrari: The Ultimate Racing Movie Experience",
         image: fordPoster,
+        billboard: fordBoard,
         description: "An adrenaline-packed ride, Ford v Ferrari is a must-watch for racing and film enthusiasts alike.",
         root: "Ford v Ferrari",
         movieTitle: "Ford v Ferrari",
         category: "Movie",
         tags: ["FordVFerrari", "Racing", "MattDamon"],
-        meta: { author: "Michael Lee", date: "March 5, 2025", comments: 42 },
+        meta: { author: "Finch", date: "March 5, 2025", comments: 42 },
         content: [
             { type: "text", value: "Ford v Ferrari is not just a racing movie—it’s a celebration of engineering, rivalry, and perseverance. Starring Matt Damon as car designer Carroll Shelby and Christian Bale as fearless driver Ken Miles, the film brings to life the true story of Ford’s ambitious attempt to defeat Ferrari at the 1966 24 Hours of Le Mans. The film captures the high stakes of motorsport, detailing the intense pressure put on the Ford team to create a race-winning machine that could stand against Ferrari's dominance." },
             { type: "image", value: fordPoster_2, caption: "Christian Bale as Ken Miles, pushing the GT40 to its limits on the racetrack." },
@@ -103,6 +110,7 @@ const PostData = [
         label: "Featured",
         title: "The War Film That Redefined Cinema",
         image: nineteenPoster,
+        billboard: nineteenBoard,
         description: "A breathtaking cinematic masterpiece that still holds up today.",
         root: "1917",
         movieTitle: "1917",
@@ -120,6 +128,7 @@ const PostData = [
         label: "Featured",
         title: "Knives Out: The Mystery Movie Everyone Should See",
         image: knivesPoster,
+        billboard: knivesBoard,
         description: "A thrilling whodunit with an all-star cast and endless twists.",
         root: "Knives Out",
         movieTitle:"Knives Out",
@@ -137,6 +146,7 @@ const PostData = [
         label: "Featured",
         title: "A Peculiar Psychological Horror Experience Like No Other. The Duo of Two Giants.",
         image: lighthousePoster,
+        billboard: lighthouseBoard,
         description: "A mind-bending masterpiece that will leave you questioning reality.",
         root: "The Lighthouse",
         movieTitle:"The Lighthouse",
@@ -154,6 +164,7 @@ const PostData = [
         label: "Featured",
         title: "Once Upon a Time in Hollywood is Tarantino’s Love Letter to the Film Industry",
         image: onceUponPoster,
+        billboard: onceUponBoard,
         description: "A nostalgic, stylish masterpiece from one of the greatest directors of all time.",
         root: "Once Upon a Time in Hollywood",
         movieTitle:"Once Upon a Time in Hollywood",
@@ -179,7 +190,7 @@ const PostData = [
         movieTitle: "Fast & Furious 9",
         category: "Movie",
         tags: ["Fast9", "VinDiesel", "Action"],
-        meta: { author: "Jake Carter", date: "April 24, 2025", comments: 48 },
+        meta: { author: "Finch", date: "April 24, 2025", comments: 48 },
         content: [
             { type: "text", value: "After months of unexpected delays, Fast & Furious 9 is officially back in production. The highly anticipated action film faced multiple setbacks due to a combination of scheduling conflicts, location restrictions, and unforeseen weather conditions. Vin Diesel recently took to social media to share behind-the-scenes photos of the cast and crew back on set, reassuring fans that the movie is still on track for its release. Fans speculated whether the delays would affect the film’s plot or push back the franchise’s overarching timeline, but Universal Studios has confirmed that all major story elements remain unchanged." },
             { type: "image", value: fast9Poster_2, caption: "The Fast saga continues with thrilling new action sequences." },
@@ -213,7 +224,7 @@ const PostData = [
         movieTitle:"Birds of Prey",
         category: "Movie",
         tags: ["BirdsOfPrey", "MargotRobbie", "DC"],
-        meta: { author: "Samantha Green", date: "July 22, 2025", comments: 31 },
+        meta: { author: "Rachel Simmons", date: "July 22, 2025", comments: 31 },
         content: [
             { type: "text", value: "Director Cathy Yan recently spoke candidly about the challenges Birds of Prey faced during its theatrical run. While the film was praised for its unique visual style, humor, and Margot Robbie’s performance as Harley Quinn, it underperformed at the box office compared to other DC properties. Yan believes that one of the primary reasons for this was the marketing strategy, which struggled to properly communicate the film’s tone and appeal to a wider audience." },
             { type: "image", value: birdsPoster_2, caption: "Harley Quinn’s wild ride still has a cult following." },
@@ -247,7 +258,7 @@ const PostData = [
         movieTitle:"Zombieland: Double Tap",
         category: "Movie",
         tags: ["Zombieland2", "Comedy", "Zombie"],
-        meta: { author: "Lauren Davis", date: "June 5, 2024", comments: 34 },
+        meta: { author: "Finch", date: "June 5, 2024", comments: 34 },
         content: [
             { type: "text", value: "Writers Rhett Reese and Paul Wernick have expressed interest in continuing the Zombieland franchise, but they say it all depends on fan demand and scheduling. The ten-year gap between the original Zombieland and Double Tap was partially due to getting the cast back together, and a third installment would likely face similar challenges. Despite this, the duo has hinted at potential story ideas that could take the characters in a fresh direction while maintaining the humor and action that made the first two films such a hit." },
             { type: "image", value: zombielandPoster_2, caption: "Could Tallahassee and crew return for another zombie adventure?" },
@@ -264,7 +275,7 @@ const PostData = [
         movieTitle:"Frozen II",
         category: "Movie",
         tags: ["Frozen2", "Disney", "Animation"],
-        meta: { author: "Jessica Lane", date: "March 8, 2025", comments: 50 },
+        meta: { author: "Jessica Lane", date: "March 8, 2025", comments: 43 },
         content: [
             { type: "text", value: "New behind-the-scenes details reveal that early versions of Frozen II had drastically different plotlines, including one where Elsa was originally meant to have a love interest. While the final version of the film focused on Elsa’s personal journey and self-discovery, concept art and early scripts suggest that Disney had, at one point, planned for her to meet another character who would challenge her understanding of her powers and identity." },
             { type: "image", value: frozenPoster_2, caption: "What if Frozen II had taken a completely different path?" },
@@ -330,7 +341,7 @@ const PostData = [
         movieTitle:"Terminator: Dark Fate",
         category: "Movie",
         tags: ["Terminator", "SciFi", "Action"],
-        meta: { author: "Lucas Carter", date: "April 1, 2025", comments: 32 },
+        meta: { author: "Finch", date: "April 1, 2025", comments: 32 },
         content: [
             { type: "text", value: "Terminator: Dark Fate was meant to revitalize the franchise, bringing back Linda Hamilton as Sarah Connor and involving James Cameron as a producer. The film ignored the events of previous sequels, acting as a direct follow-up to Terminator 2: Judgment Day. While it received positive reviews from critics and longtime fans praised its action sequences, Dark Fate struggled at the box office, failing to meet its high expectations. Many blamed franchise fatigue and a lack of compelling new characters for its underperformance." },
             { type: "image", value: terminatorPoster_2, caption: "Terminator: Dark Fate attempted to restore the franchise’s former glory." }
@@ -346,7 +357,7 @@ const PostData = [
         movieTitle:"Bombshell",
         category: "Movie",
         tags: ["Bombshell", "Drama", "TrueStory"],
-        meta: { author: "Rachel Simmons", date: "November 16, 2024", comments: 45 },
+        meta: { author: "Finch", date: "November 16, 2024", comments: 45 },
         content: [
             { type: "text", value: "Bombshell is a powerful dramatization of the real-life sexual harassment scandal that led to the downfall of Fox News CEO Roger Ailes. Featuring standout performances by Charlize Theron, Nicole Kidman, and Margot Robbie, the film provides a harrowing look at the toxic workplace culture that affected many women in the media industry. Bombshell doesn’t just tell the story—it brings viewers directly into the tension and fear that these women faced while working in an environment of silence and intimidation." },
             { type: "image", value: bombshellPoster_2, caption: "Charlize Theron’s transformation into Megyn Kelly was a highlight of Bombshell." }

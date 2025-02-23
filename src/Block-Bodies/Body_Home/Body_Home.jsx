@@ -1,38 +1,51 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import './Body.css';
 
+import Section_Featured from './Sections/Section_Featured.jsx';
 import Section from './Sections/Section.jsx';
-import Featured from './Sections/Section_Featured.jsx';
 import Section_Latest from './Sections/Section_Latest.jsx';
 
-
-import TrendPosts from "./PostsData/TrendingContent.js"
-import NewsPosts from "./PostsData/NewsContent.js"
+import PostData from "../../AllPostsData/PostData.js"; 
 import PopularPosts from "./PostsData/PopularContent.js"
-import LatestPosts from './PostsData/LatestContent.js';
+
+//------------ Get 5 top trending post [ most commented ]--------------//
+const trendingPosts = [...PostData]
+    .sort((a, b) => (b.meta?.comments || 0) - (a.meta?.comments || 0))
+    .slice(0, 5);
+
+//------------ Get 5 latest news posts --------------------------------//
+const newsPosts = [...PostData]
+    .filter(post => post.label === "News")
+    .sort((a, b) => new Date(b.meta?.date) - new Date(a.meta?.date))
+    .slice(0, 5);
+
+//---------------------------------------------------------------------//
 
 export default function Body_Home() {
     return (
         <main className='Whole-body'>
 
-            <Featured/>
+            <Section_Featured />
 
+            {/*------------ Trending in Forum ------------*/}
             <Section
                 title="Trending in Forum" 
                 moreLink="#" 
-                postsData={TrendPosts} 
+                postsData={trendingPosts} 
                 sectionId="trend-container"
                 type="B"
             />
 
+            {/*------------ Latest News ------------------*/}
             <Section
                 title="Latest News" 
                 moreLink="#" 
-                postsData={NewsPosts} 
+                postsData={newsPosts} 
                 sectionId="news-container"
                 type="B"
             />
 
+            {/*------------ Popular Movies ---------------*/}
             <Section
                 title="Popular Movies and Shows" 
                 moreLink="#" 
@@ -41,11 +54,12 @@ export default function Body_Home() {
                 type="C"
             />
 
+            {/*------------ Latest Posts -----------------*/}
             <Section_Latest
                 title="Latest Posts" 
                 moreLink="#" 
-                postsData={LatestPosts} 
-                sectionId="popular-container"
+                postsData={PostData} 
+                sectionId="latest-container"
                 type="E"
             />
 

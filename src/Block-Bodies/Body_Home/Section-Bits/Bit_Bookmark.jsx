@@ -17,7 +17,9 @@ export default function Bit_Bookmark({ post }) {
     }
   }, [post]);
 
-  const handleBookmark = () => {
+  const handleBookmark = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
     let savedBookmarks =
       JSON.parse(localStorage.getItem("bookmarkedPosts")) || [];
 
