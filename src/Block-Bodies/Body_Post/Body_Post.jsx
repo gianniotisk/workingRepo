@@ -16,13 +16,18 @@ export default function Body_Post({ post }) {
                 image={post.image} 
                 meta={post.meta} 
                 tags={post.tags} 
+                id={post.id}
+                movieTitle={post.movieTitle}
             />
+            
 
             {/*------------------------------ Post Content ------------------------------*/}
             <Section_Content content={post.content} relatedPosts={[]} />  
 
             {/*------------------------------ Comment Section ------------------------------*/}
             <Section_Comment commentsData={[]} />
+
+            
 
         </main>
     );

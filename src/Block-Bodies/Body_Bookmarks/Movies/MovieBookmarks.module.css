@@ -46,6 +46,13 @@
     color: #333;
 }
 
+.starIcon {
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
 @media (max-width: 600px) {
     .bookmarksContainer {
         width: 75%;

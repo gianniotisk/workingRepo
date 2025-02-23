@@ -65,12 +65,13 @@ const PostData = [
 
     // ============================================== FEATURED ARTICLES =====
     {
-        id: "1",
+        id: "movie012",
         label: "Featured",
-        title: "Why Joaquin Phoenix's Performance as Joke is Still Unmatched",
+        title: "Why Joaquin Phoenix's Performance as Joker is Still Unmatched",
         image: jokerPoster,
         description: "Years after its release, Joker remains one of the most celebrated performances in cinema history.",
         root: "Joker",
+        movieTitle:"Joker",
         category: "Movie",
         tags: ["Joker", "JoaquinPhoenix", "DC"],
         meta: { author: "John Doe", date: "February 10, 2025", comments: 58 },
@@ -81,12 +82,13 @@ const PostData = [
         ]
     },
     {
-        id: "2",
+        id: "movie017",
         label: "Featured",
         title: "Ford v Ferrari: The Ultimate Racing Movie Experience",
         image: fordPoster,
         description: "An adrenaline-packed ride, Ford v Ferrari is a must-watch for racing and film enthusiasts alike.",
         root: "Ford v Ferrari",
+        movieTitle: "Ford v Ferrari",
         category: "Movie",
         tags: ["FordVFerrari", "Racing", "MattDamon"],
         meta: { author: "Michael Lee", date: "March 5, 2025", comments: 42 },
@@ -97,12 +99,13 @@ const PostData = [
         ]
     },
     {
-        id: "3",
+        id: "movie001",
         label: "Featured",
         title: "The War Film That Redefined Cinema",
         image: nineteenPoster,
         description: "A breathtaking cinematic masterpiece that still holds up today.",
         root: "1917",
+        movieTitle: "1917",
         category: "Movie",
         tags: ["1917", "SamMendes", "War"],
         meta: { author: "Emily Carter", date: "April 18, 2025", comments: 33 },
@@ -113,12 +116,13 @@ const PostData = [
         ]
     },
     {
-        id: "4",
+        id: "movie013",
         label: "Featured",
         title: "Knives Out: The Mystery Movie Everyone Should See",
         image: knivesPoster,
         description: "A thrilling whodunit with an all-star cast and endless twists.",
         root: "Knives Out",
+        movieTitle:"Knives Out",
         category: "Movie",
         tags: ["KnivesOut", "Mystery", "DanielCraig"],
         meta: { author: "Sarah Jones", date: "May 20, 2025", comments: 27 },
@@ -129,12 +133,13 @@ const PostData = [
         ]
     },
     {
-        id: "5",
+        id: "movie015",
         label: "Featured",
         title: "A Peculiar Psychological Horror Experience Like No Other. The Duo of Two Giants.",
         image: lighthousePoster,
         description: "A mind-bending masterpiece that will leave you questioning reality.",
         root: "The Lighthouse",
+        movieTitle:"The Lighthouse",
         category: "Movie",
         tags: ["TheLighthouse", "Horror", "RobertPattinson"],
         meta: { author: "David Miller", date: "June 8, 2025", comments: 19 },
@@ -145,12 +150,13 @@ const PostData = [
         ]
     },
     {
-        id: "6",
+        id: "movie004",
         label: "Featured",
         title: "Once Upon a Time in Hollywood is Tarantino’s Love Letter to the Film Industry",
         image: onceUponPoster,
         description: "A nostalgic, stylish masterpiece from one of the greatest directors of all time.",
         root: "Once Upon a Time in Hollywood",
+        movieTitle:"Once Upon a Time in Hollywood",
         category: "Movie",
         tags: ["Tarantino", "Hollywood", "DiCaprio"],
         meta: { author: "Rachel Summers", date: "December 3, 2025", comments: 35 },
@@ -164,12 +170,13 @@ const PostData = [
     
     // ================================================================== NEWS ARTICLES =====
     {
-        id: "7",
+        id: "movie002",
         label: "News",
         title: "Fast & Furious 9: Filming Resumes After Unexpected Delays",
         image: fast9Poster,
         description: "Production on Fast 9 is back on track after multiple delays.",
         root: "Fast & Furious 9",
+        movieTitle: "Fast & Furious 9",
         category: "Movie",
         tags: ["Fast9", "VinDiesel", "Action"],
         meta: { author: "Jake Carter", date: "April 24, 2025", comments: 48 },
@@ -180,12 +187,13 @@ const PostData = [
         ]
     },
     {
-        id: "8",
+        id: "movie006",
         label: "News",
         title: "The Irishman 2? Scorsese Teases New Mafia Project",
         image: irishmanPoster,
         description: "Could Martin Scorsese be working on another crime epic?",
         root: "The Irishman",
+        movieTitle: "The Irishman",
         category: "Movie",
         tags: ["TheIrishman", "Scorsese", "Netflix"],
         meta: { author: "David Morgan", date: "September 5, 2024", comments: 37 },
@@ -196,12 +204,13 @@ const PostData = [
         ]
     },
     {
-        id: "9",
+        id: "movie014",
         label: "News",
         title: "Birds of Prey Director Opens Up About the Film’s Box Office Struggles",
         image: birdsPoster,
         description: "Cathy Yan reflects on the lessons learned from Birds of Prey’s mixed reception.",
         root: "Birds of Prey",
+        movieTitle:"Birds of Prey",
         category: "Movie",
         tags: ["BirdsOfPrey", "MargotRobbie", "DC"],
         meta: { author: "Samantha Green", date: "July 22, 2025", comments: 31 },
@@ -212,12 +221,13 @@ const PostData = [
         ]
     },
     {
-        id: "10",
+        id: "movie018",
         label: "News",
         title: "Doctor Sleep Director Reveals Scrapped Shining Cameos",
         image: sleepPoster,
         description: "Mike Flanagan originally had bigger plans for the Overlook Hotel’s ghosts.",
         root: "Doctor Sleep",
+        movieTitle:"Doctor Sleep",
         category: "Movie",
         tags: ["DoctorSleep", "StephenKing", "Horror"],
         meta: { author: "Nathan Carter", date: "November 28, 2024", comments: 29 },
@@ -228,12 +238,13 @@ const PostData = [
         ]
     },
     {
-        id: "11",
+        id: "movie022",
         label: "News",
         title: "Zombieland: Double Tap Writers Discuss the Future of the Franchise",
         image: zombielandPoster,
         description: "Could we see a Zombieland 3 in the near future?",
         root: "Zombieland: Double Tap",
+        movieTitle:"Zombieland: Double Tap",
         category: "Movie",
         tags: ["Zombieland2", "Comedy", "Zombie"],
         meta: { author: "Lauren Davis", date: "June 5, 2024", comments: 34 },
@@ -244,12 +255,13 @@ const PostData = [
         ]
     },
     {
-        id: "12",
+        id: "movie023",
         label: "News",
         title: "Frozen II: Unused Storylines That Would Have Changed the Film",
         image: frozenPoster,
         description: "Disney animators reveal early story concepts that were scrapped before Frozen II’s final version.",
         root: "Frozen II",
+        movieTitle:"Frozen II",
         category: "Movie",
         tags: ["Frozen2", "Disney", "Animation"],
         meta: { author: "Jessica Lane", date: "March 8, 2025", comments: 50 },
@@ -261,12 +273,13 @@ const PostData = [
     },
     // ================================================================== NORMAL ARTICLES =====
     {
-        id: "13",
+        id: "movie008",
         label: null,
         title: "How Adam Sandler Shocked the Film Industry, Breaking his Type-cast of Comedy",
         image: uncutPoster,
         description: "Uncut Gems proved that Adam Sandler could deliver a career-defining dramatic performance.",
         root: "Uncut Gems",
+        movieTitle: "Uncut Gems",
         category: "Movie",
         tags: ["UncutGems", "AdamSandler", "Thriller"],
         meta: { author: "Chris Porter", date: "May 25, 2025", comments: 41 },
@@ -276,12 +289,13 @@ const PostData = [
         ]
     },
     {
-        id: "14",
+        id: "movie010",
         label: null,
         title: "How Taika Waititi Balanced Comedy and Tragedy",
         image: jojoPoster,
         description: "Jojo Rabbit is a one-of-a-kind film that blends satire with heartfelt storytelling.",
         root: "Jojo Rabbit",
+        movieTitle: "Jojo Rabbit",
         category: "Movie",
         tags: ["JojoRabbit", "TaikaWaititi", "Satire"],
         meta: { author: "Sophia Ramirez", date: "February 25, 2025", comments: 29 },
@@ -291,12 +305,13 @@ const PostData = [
         ]
     },
     {
-        id: "15",
+        id: "movie011",
         label: null,
         title: "What Went Wrong With Robert Downey Jr.'s Passion Project?",
         image: dolittlePoster,
         description: "Dolittle was meant to be a magical adventure, but it fell flat for critics and audiences alike.",
         root: "Dolittle",
+        movieTitle: "Dolittle",
         category: "Movie",
         tags: ["Dolittle", "RobertDowneyJr", "Family"],
         meta: { author: "Nathan Green", date: "September 3, 2024", comments: 18 },
@@ -306,12 +321,13 @@ const PostData = [
         ]
     },
     {
-        id: "16",
+        id: "movie016",
         label: null,
         title: "Terminator: Dark Fate – Was This the Reboot Fans Wanted?",
         image: terminatorPoster,
         description: "The return of Linda Hamilton and James Cameron wasn’t enough to save Dark Fate at the box office.",
         root: "Terminator: Dark Fate",
+        movieTitle:"Terminator: Dark Fate",
         category: "Movie",
         tags: ["Terminator", "SciFi", "Action"],
         meta: { author: "Lucas Carter", date: "April 1, 2025", comments: 32 },
@@ -321,12 +337,13 @@ const PostData = [
         ]
     },
     {
-        id: "17",
+        id: "movie020",
         label: null,
         title: "A Film that Exposed a Real-Life Scandal in The Media World",
         image: bombshellPoster,
         description: "A gripping look at the real-life controversy that shook the media industry.",
         root: "Bombshell",
+        movieTitle:"Bombshell",
         category: "Movie",
         tags: ["Bombshell", "Drama", "TrueStory"],
         meta: { author: "Rachel Simmons", date: "November 16, 2024", comments: 45 },
@@ -336,12 +353,13 @@ const PostData = [
         ]
     },
     {
-        id: "18",
+        id: "movie021",
         label: null,
         title: "How a 2011 Film Predicted the Future: Accurate Depiction of a World Pandemic",
         image: contagionPoster,
         description: "Contagion became eerily relevant after the COVID-19 pandemic, proving how realistic its science was.",
         root: "Contagion",
+        movieTitle:"Contagion",
         category: "Movie",
         tags: ["Contagion", "Thriller", "Pandemic"],
         meta: { author: "Jason Reed", date: "June 20, 2025", comments: 61 },
@@ -351,12 +369,13 @@ const PostData = [
         ]
     },
     {
-        id: "19",
+        id: "movie024",
         label: null,
         title: "Maleficent: Mistress of Evil – A Darker Take on a Classic Tale",
         image: maleficentPoster,
         description: "Angelina Jolie returns as the misunderstood villain in this visually stunning sequel.",
         root: "Maleficent: Mistress of Evil",
+        movieTitle:"Maleficent: Mistress of Evil",
         category: "Movie",
         tags: ["Maleficent", "Disney", "Fantasy"],
         meta: { author: "Sophia Adams", date: "May 8, 2025", comments: 38 },
@@ -366,12 +385,13 @@ const PostData = [
         ]
     },
     {
-        id: "20",
+        id: "movie019",
         label: null,
         title: "The Rise of Skywalker – A Divisive Finale in The World of George Lucas",
         image: starWarsPoster,
         description: "The final chapter of the Skywalker saga left fans split between love and disappointment.",
         root: "Star Wars: Episode IX - The Rise of Skywalker",
+        movieTitle:"Star Wars: Episode IX - The Rise of Skywalker",
         category: "Movie",
         tags: ["StarWars", "SciFi", "Disney"],
         meta: { author: "Ethan Collins", date: "March 15, 2025", comments: 72 },

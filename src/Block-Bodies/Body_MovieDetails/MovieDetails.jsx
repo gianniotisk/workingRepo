@@ -68,22 +68,29 @@ const MovieDetails = () => {
   }, [id]);
 
   const handleBookmarkMovie = () => {
-    let savedMovies =
-      JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
-
+    let savedMovies = JSON.parse(localStorage.getItem("bookmarkedMovies")) || [];
+  
     if (bookadded) {
       // Remove bookmark
       savedMovies = savedMovies.filter((item) => item.id !== id);
     } else {
-      // Add bookmark if not already saved
+      // Add bookmark
+      const newMovie = {
+        id: movie.id,
+        title: movie.title,
+        image: movie.imageUrl,
+        rating: movie.userScore,
+      };
+  
       if (!savedMovies.some((item) => item.id === id)) {
-        savedMovies.push(movie);
+        savedMovies.push(newMovie);
       }
     }
-
+  
     localStorage.setItem("bookmarkedMovies", JSON.stringify(savedMovies));
     setBookadded(!bookadded);
   };
+  
 
   if (!movie) return <p>Loading...</p>;
 

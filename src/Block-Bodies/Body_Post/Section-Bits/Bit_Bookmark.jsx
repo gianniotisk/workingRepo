@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Bookadd from "../../../assets/Body/Section-Bits/Bookadd.png";
-import Bookadded from "../../../assets/Body/Section-Bits/Bookadded.png"; // TO CHANGE
+import Bookadded from "../../../assets/Body/Section-Bits/Bookadded.png";
 
 export default function Bit_Bookmark({ post }) {
   const [bookadded, setBookadded] = useState(false);
@@ -63,5 +63,7 @@ Bit_Bookmark.propTypes = {
     description: PropTypes.string,
     meta: PropTypes.any,
     tags: PropTypes.arrayOf(PropTypes.string),
+    id: PropTypes.string,
+    movieTitle: PropTypes.string,
   }).isRequired,
 };

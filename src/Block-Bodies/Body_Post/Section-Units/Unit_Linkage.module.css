@@ -62,6 +62,15 @@
     color: white;
 }
 
+.movieSection{
+    padding: 10px;
+}
+
+.movieImage{
+    width: 150px;
+    height: 150px;
+}
+
 /* 🔹 Responsive: Adjust for Small Screens */
 @media (max-width: 768px) {
     .linkage {
