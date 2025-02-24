@@ -20,6 +20,15 @@
     transform: translateY(0);
 }
 
+.menu-link {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.menu-link:visited {
+    color: inherit;  
+}
+
 /*----------------- Close Button ------*/
 .close-menu {
     position: fixed; 

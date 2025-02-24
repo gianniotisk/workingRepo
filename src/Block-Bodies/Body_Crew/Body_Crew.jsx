@@ -10,7 +10,7 @@ export default function Body_Crew() {
     const [sortBy, setSortBy] = useState("");
     const [filterBy, setFilterBy] = useState("all");
     const [currentPage, setCurrentPage] = useState(1);
-    const crewPerPage = 5;
+    const crewPerPage = 10;
 
     useEffect(() => {
         fetch("https://city-assignment.firebaseio.com/people.json")
@@ -40,9 +40,9 @@ export default function Body_Crew() {
     }, [filteredCrew, currentPage]);
 
     return (
-        <main className={styles.WholeBody}>
+        <main className={styles.container}>
             <header className={styles.title}>
-                Explore Our Actors and Directors Database
+                Explore Our Actors and Directors
             </header>
             <Section_Sort setSortBy={setSortBy} />
             <Section_Filter setFilterBy={setFilterBy} />

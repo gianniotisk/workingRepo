@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import "./menu.css";
 
 import Movies from "../../assets/Menu/movies.png";
@@ -21,14 +22,44 @@ export default function Menu({ menuStatus, toggleMenu }) {
     }, [menuStatus]);
     //----------------------------------------------------------------
 
-    // Define menu sections dynamically
+    // Define menu sections dynamically with paths
     const menuSections = [
-        { title: "Movies", icon: Movies, items: ["Movies by Genre", "Upcoming Movies", "Popular Movies", "Top Box Office"] },
-        { title: "TV Series", icon: Series, items: ["Series by Genre", "Series Release Updates", "Popular Series", "Top Rating Shows"] },
-        { title: "Actors & Celebs", icon: Actors, items: ["Most Popular Celebs", "Celebrity News", "Active Shooting"] },
-        { title: "Production Crew", icon: Crews, items: ["Producers & Directors", "Companies & Production", "Production Staff"] },
-        { title: "Fictional Characters", icon: Characters, items: ["Characters by Genre", "Popular Characters"] },
-        { title: "Awards & Events", icon: Awards, items: ["Best of 2024", "Famous Events"] }
+        { 
+            title: "Movies", 
+            icon: Movies, 
+            items: ["Movies by Genre", "Upcoming Movies", "Popular Movies", "Top Box Office"], 
+            path: "/movies" 
+        },
+        { 
+            title: "TV Series", 
+            icon: Series, 
+            items: ["Series by Genre", "Series Release Updates", "Popular Series", "Top Rating Shows"], 
+            path: "/movies" 
+        },
+        { 
+            title: "Actors & Celebs", 
+            icon: Actors, 
+            items: ["Most Popular Celebs", "Celebrity News", "Active Shooting"], 
+            path: "/Crew" 
+        },
+        { 
+            title: "Production Crew", 
+            icon: Crews, 
+            items: ["Producers & Directors", "Companies & Production", "Production Staff"], 
+            path: "/Crew" 
+        },
+        { 
+            title: "Fictional Characters", 
+            icon: Characters, 
+            items: ["Characters by Genre", "Popular Characters"], 
+            path: "/Crew" 
+        },
+        { 
+            title: "Awards & Events", 
+            icon: Awards, 
+            items: ["Best of 2024", "Famous Events"], 
+            path: "/forum" 
+        }
     ];
 
     return (
@@ -50,7 +81,9 @@ export default function Menu({ menuStatus, toggleMenu }) {
                         <ul>
                             {section.items.map((item, idx) => (
                                 <li key={idx}>
-                                    <div className="spacer"></div> {item}
+                                    <Link to={section.path} className="menu-link">
+                                        <div className="spacer"></div>{item}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -60,10 +93,14 @@ export default function Menu({ menuStatus, toggleMenu }) {
                 {/*------------------------- Footer Section ---*/}
                 <div className="menu-column footer">
                     <div className="bottom-wrapper">
-                        <img src={Forum} alt="Community Forum Icon" className="footer-icon" /> Community Forum
+                        <Link to="/forum" className="menu-link">
+                            <img src={Forum} alt="Community Forum Icon" className="footer-icon" /> Community Forum
+                        </Link>
                     </div>
                     <div className="bottom-wrapper">
-                        <img src={Bookmarks} alt="Bookmarks Icon" className="footer-icon" /> Bookmarks
+                        <Link to="/bookmarks" className="menu-link">
+                            <img src={Bookmarks} alt="Bookmarks Icon" className="footer-icon" /> Bookmarks
+                        </Link>
                     </div>
                 </div>
                 {/*---------------------------------------------*/}

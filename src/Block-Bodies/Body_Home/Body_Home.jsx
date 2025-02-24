@@ -1,68 +1,73 @@
-import { useState } from 'react';
-import './Body.css';
+import { useEffect, useState } from "react";
+import "./Body.css";
 
-import Section_Featured from './Sections/Section_Featured.jsx';
-import Section from './Sections/Section.jsx';
-import Section_Latest from './Sections/Section_Latest.jsx';
+import Section_Featured from "./Sections/Section_Featured.jsx";
+import Section from "./Sections/Section.jsx";
+import Section_Latest from "./Sections/Section_Latest.jsx";
 
-import PostData from "../../AllPostsData/PostData.js"; 
-import PopularPosts from "./PostsData/PopularContent.js"
-
-//------------ Get 5 top trending post [ most commented ]--------------//
-const trendingPosts = [...PostData]
-    .sort((a, b) => (b.meta?.comments || 0) - (a.meta?.comments || 0))
-    .slice(0, 5);
-
-//------------ Get 5 latest news posts --------------------------------//
-const newsPosts = [...PostData]
-    .filter(post => post.label === "News")
-    .sort((a, b) => new Date(b.meta?.date) - new Date(a.meta?.date))
-    .slice(0, 5);
-
-//---------------------------------------------------------------------//
+import PostData from "../../AllPostsData/PostData.js";
+import { useMovieDatabase } from "../../AllPostsData/MoviesDatabase.js";
 
 export default function Body_Home() {
-    return (
-        <main className='Whole-body'>
+    const [posts, setPosts] = useState([]);
+    const movies = useMovieDatabase(); 
 
+    useEffect(() => {
+        setPosts([...PostData]);
+    }, []);
+
+    const trendingPosts = [...posts]
+        .filter(post => post.meta?.comments !== undefined)
+        .sort((a, b) => (b.meta?.comments || 0) - (a.meta?.comments || 0))
+        .slice(0, 5);
+
+    const newsPosts = [...posts]
+        .filter(post => post.label === "News")
+        .sort((a, b) => new Date(b.meta?.date) - new Date(a.meta?.date))
+        .slice(0, 5);
+
+    const popularMovies = [...movies]
+        .filter(movie => !isNaN(movie.rating) && movie.rating !== "N/A")
+        .sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
+        .slice(0, 6)
+        .map(movie => ({
+            id: movie.id,
+            title: movie.title,
+            banner: movie.banner, 
+            rating: movie.rating,
+        }));
+
+    return (
+        <main className="Whole-body">
             <Section_Featured />
 
-            {/*------------ Trending in Forum ------------*/}
             <Section
-                title="Trending in Forum" 
-                moreLink="#" 
-                postsData={trendingPosts} 
+                title="Trending in Forum"
+                postsData={trendingPosts}
                 sectionId="trend-container"
                 type="B"
             />
 
-            {/*------------ Latest News ------------------*/}
             <Section
-                title="Latest News" 
-                moreLink="#" 
-                postsData={newsPosts} 
+                title="Latest News"
+                postsData={newsPosts}
                 sectionId="news-container"
                 type="B"
             />
 
-            {/*------------ Popular Movies ---------------*/}
             <Section
-                title="Popular Movies and Shows" 
-                moreLink="#" 
-                postsData={PopularPosts} 
+                title="Most Popular Movies"
+                postsData={popularMovies}
                 sectionId="popular-container"
                 type="C"
             />
 
-            {/*------------ Latest Posts -----------------*/}
             <Section_Latest
-                title="Latest Posts" 
-                moreLink="#" 
-                postsData={PostData} 
+                title="Latest Posts"
+                postsData={posts}
                 sectionId="latest-container"
                 type="E"
             />
-
         </main>
     );
 }

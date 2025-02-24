@@ -10,7 +10,7 @@ export default function Section({ title, moreLink, postsData, sectionId, type })
 
             <div className={styles.container}>
                 {/*------------------------------ Section Head -----------*/}
-                <Unit_Head title={title} moreLink={moreLink} />
+                <Unit_Head title={title} />
                 {/*------------------------------ Section Content --------*/}
                 <Unit_Hull postsData={postsData} type={type}/>
             </div>

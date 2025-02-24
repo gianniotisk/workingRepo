@@ -65,7 +65,6 @@ import starWarsPoster from "../assets/Pictures/starWarsPoster.png";
 import starWarsPoster_2 from "../assets/Pictures/starWarsPoster_2.png";
 
 
-
 const PostData = [
 
     // ============================================== FEATURED ARTICLES =====
@@ -275,7 +274,7 @@ const PostData = [
         movieTitle:"Frozen II",
         category: "Movie",
         tags: ["Frozen2", "Disney", "Animation"],
-        meta: { author: "Jessica Lane", date: "March 8, 2025", comments: 43 },
+        meta: { author: "Jessica Lane", date: "March 8, 2025", comments: 37 },
         content: [
             { type: "text", value: "New behind-the-scenes details reveal that early versions of Frozen II had drastically different plotlines, including one where Elsa was originally meant to have a love interest. While the final version of the film focused on Elsa’s personal journey and self-discovery, concept art and early scripts suggest that Disney had, at one point, planned for her to meet another character who would challenge her understanding of her powers and identity." },
             { type: "image", value: frozenPoster_2, caption: "What if Frozen II had taken a completely different path?" },
@@ -293,7 +292,7 @@ const PostData = [
         movieTitle: "Uncut Gems",
         category: "Movie",
         tags: ["UncutGems", "AdamSandler", "Thriller"],
-        meta: { author: "Chris Porter", date: "May 25, 2025", comments: 41 },
+        meta: { author: "Chris Porter", date: "May 25, 2025", comments: 51 },
         content: [
             { type: "text", value: "Uncut Gems took audiences and critics by surprise, showcasing a completely different side of Adam Sandler. Known primarily for his comedy roles, Sandler delivered an electrifying performance as Howard Ratner, a desperate New York jeweler with a dangerous addiction to high-stakes gambling. Directed by the Safdie Brothers, the film is a relentless thriller that keeps viewers on edge from start to finish. The fast-paced dialogue, chaotic cinematography, and anxiety-inducing score create a stressful yet captivating experience that perfectly mirrors the protagonist’s deteriorating state of mind." },
             { type: "image", value: uncutPoster_2, caption: "Adam Sandler delivers the most intense performance of his career in Uncut Gems." }
@@ -405,12 +404,13 @@ const PostData = [
         movieTitle:"Star Wars: Episode IX - The Rise of Skywalker",
         category: "Movie",
         tags: ["StarWars", "SciFi", "Disney"],
-        meta: { author: "Ethan Collins", date: "March 15, 2025", comments: 72 },
+        meta: { author: "Ethan Collins", date: "March 15, 2025", comments: 92 },
         content: [
             { type: "text", value: "Star Wars: The Rise of Skywalker marked the end of the beloved Skywalker saga, bringing an emotional yet controversial conclusion to the decades-spanning franchise. Directed by J.J. Abrams, the film attempted to wrap up the stories of Rey, Kylo Ren, and the Resistance while also revisiting legacy characters and past plotlines. Despite its box office success, the film was met with mixed reactions, with some praising its nostalgic moments and others criticizing its rushed pacing and lack of cohesion." },
             { type: "image", value: starWarsPoster_2, caption: "The Rise of Skywalker brought a divisive ending to the Star Wars saga." }
         ]
     },    
 ];
+
 
 export default PostData;

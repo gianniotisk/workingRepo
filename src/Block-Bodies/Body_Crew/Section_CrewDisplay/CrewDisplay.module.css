@@ -1,22 +1,27 @@
+/*------------------------------------- Crew Display Grid -------------------------------------*/
+
 .crewDisplay {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
   gap: 20px;
-  padding: 20px;
-  background-color: white;
+  padding-block: 50px;
   width: 100%;
   box-sizing: border-box;
+  justify-content: center;
 }
-  
+
+/*------------------------------------- Crew Card -------------------------------------*/
+
 .crewItem {
   text-align: center;
   width: 100%;
 }
-  
+
 .crewItem a {
   text-decoration: none;
 }
-  
+
 .crewItem img {
   width: 120px;
   height: 120px;
@@ -24,33 +29,48 @@
   object-fit: cover;
   margin-bottom: 10px;
 }
-  
-  
-  
-@media (max-width: 768px) {
 
+/*------------------------------------- Responsive Design -------------------------------------*/
+
+@media (max-width: 1024px) {
   .crewDisplay {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+    grid-template-rows: repeat(3, auto); /* 3 rows to fit 10 items */
   }
-
-  .crewItem img {
-    max-width: 120px;
-  }
-
-  select {
-    font-size: 0.9rem;
-  }
-
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .crewDisplay {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
   }
 
   .crewItem img {
-    max-width: 100px;
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  .crewDisplay {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    grid-template-rows: repeat(5, auto); /* 5 rows */
   }
 
+  .crewItem img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .crewDisplay {
+    grid-template-columns: repeat(1, 1fr); /* 1 per row */
+    grid-template-rows: repeat(10, auto); /* 10 rows (one column) */
+  }
+
+  .crewItem img {
+    width: 90px;
+    height: 90px;
+  }
 }

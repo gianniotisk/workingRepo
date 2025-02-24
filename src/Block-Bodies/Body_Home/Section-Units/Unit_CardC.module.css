@@ -1,5 +1,8 @@
 /*----------------------( POPULAR CARDS )---------------------*/
-
+.cardLink {
+    text-decoration: none;
+    color: inherit;
+}
 /* Card Container */
 .card {
     background-color: #1a1a1a;

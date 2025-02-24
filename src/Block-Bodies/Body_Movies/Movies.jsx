@@ -11,9 +11,8 @@ const Movies = () => {
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [sortBy, setSortBy] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const moviesPerPage = 14;
+  const [moviesPerPage, setMoviesPerPage] = useState(10);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [hoveredMovie, setHoveredMovie] = useState(null);
 
   useEffect(() => {
     fetch("https://city-assignment.firebaseio.com/movies.json")
@@ -37,6 +36,28 @@ const Movies = () => {
   useEffect(() => {
     applyFilters();
   }, [selectedGenres, sortBy]);
+
+  // Dynamically update moviesPerPage based on screen size
+  useEffect(() => {
+    const updateMoviesPerPage = () => {
+      let columns = 5;
+      let rows = 2;
+
+      if (window.innerWidth < 1300) columns = 4;
+      if (window.innerWidth < 1024) columns = 3, rows = 3;
+      if (window.innerWidth < 768) columns = 2, rows = 4;
+      if (window.innerWidth < 480) columns = 1, rows = 5;
+
+      setMoviesPerPage(columns * rows);
+    };
+
+    updateMoviesPerPage();
+    window.addEventListener("resize", updateMoviesPerPage);
+
+    return () => {
+      window.removeEventListener("resize", updateMoviesPerPage);
+    };
+  }, []);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -84,9 +105,10 @@ const Movies = () => {
   const totalPages = Math.ceil(filteredMovies.length / moviesPerPage);
 
   return (
-    <div className="Whole-body">
-      <header className={styles.title}>Explore Our Movies Database</header>
+    <div className={styles.container}>
+      <header className={styles.title}>Explore Our Movies</header>
 
+      {/*----------------------------- Sorting & Filtering Section -----------------------------*/}
       <section className={styles.sortFilteringButtons}>
         <select
           id="sortBy"
@@ -103,61 +125,54 @@ const Movies = () => {
           <option value="Year">Year</option>
         </select>
 
-        <section className={styles.filteringOptions}>
-          <div className={styles.dropdown}>
-            <button className={styles.dropdownButton} onClick={toggleDropdown}>
-              Select Genres
-            </button>
-            {dropdownOpen && (
-              <div className={`${styles.dropdownContent} ${styles.show}`}>
-                {Object.keys(genres).map((genre) => (
-                  <label key={genre}>
-                    <input
-                      type="checkbox"
-                      value={genre}
-                      onChange={onGenreChange}
-                    />
-                    {genre}
-                  </label>
-                ))}
-              </div>
-            )}
-          </div>
-        </section>
+        <div className={styles.dropdown}>
+          <button className={styles.dropdownButton} onClick={toggleDropdown}>
+            Select Genres
+          </button>
+          {dropdownOpen && (
+            <div className={`${styles.dropdownContent} ${styles.show}`}>
+              {Object.keys(genres).map((genre) => (
+                <label key={genre}>
+                  <input
+                    type="checkbox"
+                    value={genre}
+                    onChange={onGenreChange}
+                  />
+                  {genre}
+                </label>
+              ))}
+            </div>
+          )}
+        </div>
       </section>
 
+      {/*----------------------------- Movies Display Section -----------------------------*/}
       <section className={styles.moviesDisplay}>
         {displayedMovies.map((movie) => (
-          <span className={styles.movieItem} key={movie.id}>
+          <div className={styles.movieCard} key={movie.id}>
             <Link to={`/movieDetails/${movie.id}`}>
               <img
                 src={movie.imageUrl}
                 alt={`${movie.title} poster`}
                 className={styles.moviesPoster}
-                onMouseEnter={() => setHoveredMovie(movie.id)}
-                onMouseLeave={() => setHoveredMovie(null)}
               />
             </Link>
             <p className={styles.movieSpecs}>
-              <span className={styles.movieTitle}>{movie.title}</span>
-              <br />
-              <strong>Year:</strong> {movie.year}
-              <img
-                src={STAR}
-                className={styles.ratingImage}
-                alt="Rating Star"
-              />
-              {movie.userScore}
+                <span className={styles.movieTitle}>{movie.title}</span>
+                
+                <div className={styles.movieInfo}>
+                    <span>Year: {movie.year}</span>
+                    <div className={styles.ratingContainer}>
+                        <img src={STAR} className={styles.ratingImage} alt="Rating Star" />
+                        <span>{movie.userScore}</span>
+                    </div>
+                </div>
             </p>
-
-            {/* Hover Box for when you hover over a movie poster */}
-            {hoveredMovie === movie.id && (
-              <div className={styles.mouseHoverBox}>{movie.summary}</div>
-            )}
-          </span>
+          </div>
         ))}
       </section>
 
+      {/*----------------------------- Pagination Section -----------------------------*/}
       <aside className={styles.pagination}>
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button

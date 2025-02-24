@@ -4,12 +4,15 @@
     box-sizing: border-box;
 }
 
-.WholeBody {
+.container{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
+    height: auto;
+    padding-block: 50px;
 }
 
 .title{
@@ -17,4 +20,4 @@
     font-size: 30px;
     padding: 5px;
     text-align: center;
-  }
+}

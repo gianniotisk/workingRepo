@@ -5,89 +5,131 @@
     align-items: flex-start;
     gap: 15px;
     padding-left: 50px;
+    position: relative;
 }
 
-/* 🔹 Bookmark Container */
+/* 🔹 Bookmark Section */
 .bookmarkContainer {
     display: flex;
     align-items: center;
-    gap: 8px; /* 🔥 Adds spacing between text & button */
+    gap: 8px;
     font-size: 16px;
     font-weight: bold;
     color: #333;
 }
 
-/* Tags Section */
-.tags {
+.relatedText {
+    padding-top: 30px;
+}
+
+/* 🔹 Movie Card */
+.movieCardLink {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.movieCard {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
+    padding-bottom: 10px;
+    transition: background 0.2s ease-in-out;
 }
 
-/* Tag Heading */
-.tags h3 {
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 5px;
+.movieCard:hover {
+    background-color: #333;
 }
 
-/* Tag List */
-.tags ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* 🔹 Responsive Movie Image */
+.movieCardImage {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-bottom: 2px solid #333;
+    transition: height 0.3s ease-in-out;
+}
+
+.movieCardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movieCardContent {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 4px;
+    text-align: center;
+    width: 100%;
+}
+
+/* 🔹 Truncate Long Titles */
+.movieCardContent h4 {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    width: 90%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 🔹 Movie Details */
+.movieDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #c0c0c0;
     gap: 8px;
 }
 
-/* Individual Tag */
-.tag {
-    font-size: 14px;
-    color: #333;
-    padding: 6px 10px;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-/* Hover Effect */
-.tag:hover {
-    background-color: #c30505c2;
-    color: white;
+.starIcon {
+    width: 14px;
 }
 
-.movieSection{
-    padding: 10px;
-}
-
-.movieImage{
-    width: 150px;
-    height: 150px;
-}
-
-/* 🔹 Responsive: Adjust for Small Screens */
+/* 🔹 Responsive Adjustments */
 @media (max-width: 768px) {
     .linkage {
-        width: 20%;
         padding-left: 0px;
     }
-
-    .tags {
-        max-width: 180px;
+    
+    .relatedText {
+        font-size: 15px;
+        padding-top: 0px;
+    }
+    
+    .movieCard {
+        max-width: 90px;
     }
 
-    .tag {
-        font-size: 12px;
-        padding: 4px 6px;
+    .movieCardImage {
+        height: 120px;
     }
 
-    .bookmarkContainer {
-        font-size: 14px; /* 🔹 Adjust text size on mobile */
+    .movieCardContent h4 {
+        font-size: 10px;
+        width: 85%;
+    }
+
+    .movieDetails {
+        display: none;
     }
 }
