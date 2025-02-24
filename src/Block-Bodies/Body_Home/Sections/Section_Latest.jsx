@@ -41,11 +41,10 @@ export default function Section_Latest({ title, moreLink, postsData, sectionId, 
                 <Unit_Hull postsData={filteredPosts} type={type} />
 
                 {/*------------------------------ See More Button ---------------*/}
-                {moreLink && (
-                    <Link to="/Forum" className={styles.seeMoreBtn}>
-                                                See More
-                    </Link>
-                )}
+                <Link to="/Forum" className={styles.seeMoreBtn}>
+                    See More
+                </Link>
+    
 
             </div>
         </section>
